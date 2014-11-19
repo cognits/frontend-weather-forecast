@@ -1,0 +1,64 @@
+body{
+	overflow-x:hidden; 
+	background: url(../pictures/l.jpg);
+	background-size: 100% ; 
+}
+div.modulo1{
+	width:400px;
+	height:300px;
+
+	margin: auto;
+	background-color:#81DAF5;
+	display:none;
+
+}
+div.modulo3{
+	width:400px;
+	height:300px;
+
+	margin: auto;
+	background-color:#81DAF5;
+	
+
+}
+
+div#cuadro1{
+	width:300px;
+
+	margin: center;
+}
+div.cuadro2{
+	width:200px;
+	margin: -200px 0px 0px 300px;
+
+	
+}
+h3#city{
+	display:inline-block;
+	background-color: #FFBF00;
+	color:#fff;
+	text-decoration:none;
+	padding:5px 25px;
+	margin: 15px 0px 0px 45px;
+
+}
+.button{
+	display: inline-block;
+	height:20px;
+	width:160px;
+	background-color:blue;
+	font-family:arial;
+	font-weight:bold;
+	color:#ffffff;
+	border-radius: 5px;
+	text-align:center;
+
+}
+div.ingresos{
+	width:100%;
+	height:300px;
+	color:#ffffff;
+	margin: auto;
+	text-align:center;
+
+}
