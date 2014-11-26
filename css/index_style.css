@@ -1,0 +1,73 @@
+*{
+	margin:0px;
+	padding:0px;
+	font-family: helvetica;
+}
+
+body{
+	overflow-x:hidden; 
+	background: url(../pictures/j.jpg);
+	background-size: 100% 140%; 
+	
+
+	
+}
+p#uno{
+	font-family: Verdana;
+	font-size: 40px;
+	color:#F4EFEF;
+	margin: 250px 0px 0px 650px;
+	float:left;
+}
+p#dos{
+	font-family: Verdana;
+	font-size: 40px;
+	color:#F4EFEF;
+	margin: 300px 0px 0px -100px;
+	float:left;
+}
+p#tres{
+	font-family: Verdana;
+	font-size: 40px;
+	color:#F4EFEF;
+	margin: 350px 0px 0px -290px;
+	float:left;
+}
+p#cuatro{
+	display:inline-block;
+	background-color:#45505B;
+	color:#fff;
+	text-decoration:none;
+	padding:10px 30px;
+	margin: 500px 0px 0px -250px;
+	font-size:1.3em;
+}
+
+div#banner{
+
+	float:right;
+	width:300px;
+	height:800px;
+
+}
+
+div#info{
+	margin: 200px 0px 0px 0px;
+	float:right;
+	width:200px;
+	height:400px;
+	margin-right:-200px;
+	background-color:transparent;
+	-webkit-transition: margin-right .6s;
+	color:white;
+	text-align: center;
+	font-family: Garamond, serif;
+}
+
+div#banner:hover div#info{
+	margin-right: 0px;
+}
+
+
+
+
