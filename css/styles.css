@@ -1,0 +1,29 @@
+/* All Banner */
+.banner{
+	/*background-color: #58FAF4;*/
+	width: 1285px;
+	height: 110px;
+}
+
+.title{
+	color: white;
+	font-size: 40px;
+	font-family: Verdana;
+	margin-top: -70px;
+	margin-left: 700px;
+}
+
+.logo{
+	margin-left: 30px;
+	margin-top: 20px;
+}
+
+/* Body */
+body{
+	background-image: url('http://www.fondox.net/wallpapers/la-torre-eiffel-al-atardecer-1334.jpg');  
+}
+
+/* Botones */
+.buton{
+	display: inline-block; 
+}

@@ -1,8 +1,10 @@
+<!DOCTYPE html>
 <!--
 Usa este archivo para tu proyecto. No olvides hacer
 la estructura correta y guardar TODO tu CSS en el archivo styles.css
  -->
-<!DOCTYPE html>
+
+
 <!-- saved from url=(0039)http://getbootstrap.com/examples/blog/# -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
@@ -10,9 +12,13 @@ la estructura correta y guardar TODO tu CSS en el archivo styles.css
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="http://getbootstrap.com/favicon.ico">
+    <link rel="icon" href="images/kar.ico">
 
-    <title>Cognits Blog</title>
+    <title>Weather Forecast *** KAR</title>
+
+
+    <!-- JQuery -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -30,8 +36,25 @@ la estructura correta y guardar TODO tu CSS en el archivo styles.css
 </head>
 
   <body>
+    <!-- All Banner -->
+    <div class = "banner">
+        <div class= "logo">
+            <img src="images/cognits-logo.png" alt="Cognits Logo"/>            
+        </div>
+        <p class="title"> Weather - Forecast </p>
+    </div>
+    <hr class="separators">
+
+    <!-- Imputs of Dates -->
+    <p class="searching">Insert Country » <input name="pais" id="country" type="text" placeholder="Country"/></p>
+    <p class="searching">Insert City » <input name="ciudad" id="city" type="text" placeholder="City"/></p>
+    <button class ="button" id="boton1">Press Here!</button> 
+    <button class ="buton" id="boton2">Clima Here!</button><br/>
 
 
+
+    <!-- Div of the Screen -->
+    <div class="screen"> </div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
