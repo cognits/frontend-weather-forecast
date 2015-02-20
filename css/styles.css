@@ -23,7 +23,7 @@
 	margin-top: 50px;
 	margin-left: 340px;
 	width: 550px;
-	height: 140px;
+	height: 180px;
 	border: 2px solid gray;
 	border-radius: 7px;
 }
@@ -43,6 +43,16 @@
 .searching{
 	margin-left: 85px;
 }
+.rc{
+	margin-top: 0px;
+	margin-left: 100px;
+}
+.rf{
+	margin-top: -35px;
+	margin-left: 300px;
+}
+
+
 /* Div of Country and Code */
 .screen1{
 	margin-left: 550px;
@@ -83,26 +93,17 @@ body{
 .icon{
 	margin-left: 30px;
 }
-/* Temp - °C */
-.cel{
+/* Temp - °C  / °F */
+.temp_c_f{
 	margin-top: -180px;
 	margin-left: 250px;
 	font-size: 20px;
 }
-.tc{
+.t_c_f{
 	margin-left: 300px;
 	font-size: 30px;
 }
 
-/* Temp - °F */
-.far{
-	margin-top: -120px;
-	margin-left: 580px;
-}
-.tf{
-	margin-left: 620px;
-	font-size: 30px;
-}
 
 /* Up_date */
 .up_date{

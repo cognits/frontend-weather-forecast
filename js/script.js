@@ -18,15 +18,16 @@ var pressure ="";
 var visibility ="";
 
 
-
+/*  Variables de los Radio Buttons */
+var radio_c = 0;
+var radio_f = 0;
 
 //Imputs:
 var contry = "";
 var city = "";
 
 $(document).ready(function() {
-    //$('#country').val(" ");
-    //$('#city').val(" ");
+
     $(".insert").hide("slide");
     $(".screen2").hide("slide");
 
@@ -57,61 +58,66 @@ $(document).ready(function() {
 
             if (codigo.length != 0){
                 jQuery(document).ready(function($) { 
-                $.ajax({ 
-                    url : url, 
-                    dataType : "jsonp",
-                    success : function(parse_clima) {
+                    $.ajax({ 
+                        url : url, 
+                        dataType : "jsonp",
+                        success : function(parse_clima) {
 
-                        display = parse_clima["current_observation"]["display_location"]["full"];
-                        up_date = parse_clima["current_observation"]["local_time_rfc822"];
-                        weather = parse_clima["current_observation"]["weather"];
-                        image = parse_clima["current_observation"]["icon_url"];
-                        icon = parse_clima["current_observation"]["icon"];
-                        far = parse_clima["current_observation"]["temp_f"];
-                        celcios = parse_clima["current_observation"]["temp_c"];
-                        wind = parse_clima["current_observation"]["wind_string"];
-                        humidity = parse_clima["current_observation"]["relative_humidity"];
-                        pressure = parse_clima["current_observation"]["pressure_mb"];
-                        visibility = parse_clima["current_observation"]["visibility_km"];
+                            display = parse_clima["current_observation"]["display_location"]["full"];
+                            up_date = parse_clima["current_observation"]["local_time_rfc822"];
+                            weather = parse_clima["current_observation"]["weather"];
+                            image = parse_clima["current_observation"]["icon_url"];
+                            icon = parse_clima["current_observation"]["icon"];
+                            far = parse_clima["current_observation"]["temp_f"];
+                            celcios = parse_clima["current_observation"]["temp_c"];
+                            wind = parse_clima["current_observation"]["wind_string"];
+                            humidity = parse_clima["current_observation"]["relative_humidity"];
+                            pressure = parse_clima["current_observation"]["pressure_mb"];
+                            visibility = parse_clima["current_observation"]["visibility_km"];
 
-                        $('.screen2').append("<p class =\"display\">"+ display +"</p><hr>");
-                        
+                            $('.screen2').append("<p class =\"display\">"+ display +"</p><hr>");
+                            
 
-                        $('.screen2').append("<img class =\"cloud\" src= \""+ image +"\" alt =\"Imagen Clima\">");
-                        $('.screen2').append("<p class =\"icon\">"+ icon.toUpperCase() +"</p></br><hr>");
+                            $('.screen2').append("<img class =\"cloud\" src= \""+ image +"\" alt =\"Imagen Clima\">");
+                            $('.screen2').append("<p class =\"icon\">"+ icon.toUpperCase() +"</p></br><hr>");
 
-                        /* Celcious Temperature */
-                        $('.screen2').append("<p class =\"cel\"> Temperatura °C:</p> ");
-                        $('.screen2').append("<p class =\"tc\">"+celcios+" °C</p>");
 
-                        /*Farenheight Temperature */
-                        $('.screen2').append("<p class =\"far\"> Temperatura °F:</p>");
-                        $('.screen2').append("<p class =\"tf\">"+far+" °F</p>");
+                            if (radio_c == 1){
+                                /* Celcious Temperature */
+                                $('.screen2').append("<p class =\"temp_c_f\"> Temperatura °C:</p> ");
+                                $('.screen2').append("<p class =\"t_c_f\">"+celcios+" °C</p>");}
+                            else if (radio_f == 1){
+                                /*Farenheight Temperature */
+                                $('.screen2').append("<p class =\"temp_c_f\"> Temperatura °F:</p>");
+                                $('.screen2').append("<p class =\"t_c_f\">"+far+" °F</p>");
+                            }
+                            /* up_date */
+                            $('.screen2').append("<p class =\"up_date\"> Last Up Date: "+ up_date +"</p>");
+                            /*Weather*/
+                            $('.screen2').append("<p class =\"weather\"> Weather: "+ weather +"</p>");
 
-                        /* up_date */
-                        $('.screen2').append("<p class =\"up_date\"> Last Up Date: "+ up_date +"</p>");
-                        /*Weather*/
-                        $('.screen2').append("<p class =\"weather\"> Weather: "+ weather +"</p>");
+                            /*Wind*/
+                            $('.screen2').append("<p class =\"wind\"> Wind : "+ wind +"</p>");
 
-                        /*Wind*/
-                        $('.screen2').append("<p class =\"wind\"> Wind : "+ wind +"</p>");
+                            /*Humidity*/
+                            $('.screen2').append("<p class =\"humidity\"> Humidity : "+ humidity +"</p>");
 
-                        /*Humidity*/
-                        $('.screen2').append("<p class =\"humidity\"> Humidity : "+ humidity +"</p>");
+                            /*Preasure*/
+                            $('.screen2').append("<p class =\"pressure\"> Pressure : "+ pressure +" hPa</p>");
 
-                        /*Preasure*/
-                        $('.screen2').append("<p class =\"pressure\"> Pressure : "+ pressure +" hPa</p>");
+                            /*Visibility*/
+                            $('.screen2').append("<p class =\"visibility\"> Visibility : "+ visibility +" Km</p>");
 
-                        /*Visibility*/
-                        $('.screen2').append("<p class =\"visibility\"> Visibility : "+ visibility +" Km</p>");
+                            /** Show my Weather Div */
+                            $(".screen2").show("slide");
+                            /* Clean my Textbox */
+                            $(".country").val("");
+                            $(".city").val("");
 
-                        /*
-                        $(".tc").hide();
-                        $(".tf").hide();*/
-                        $(".screen2").show("slide");
-                    }
-            });
-            });
+
+                        }
+                    });
+                });
             }
             else{
                 alert("Error Don't find Json");
@@ -124,10 +130,18 @@ $(document).ready(function() {
         }
     });
     
-    $('.could').click(function() {
-        alert("°C"); 
-       $('.tc').show('slide');
+    $('.r1').click(function(){
+        alert('°C');
+        radio_c = 1;
+        radio_f = 0;
     });
+
+    $('.r2').click(function(){
+        alert('°F');
+        radio_c = 0;
+        radio_f = 1;
+    });
+
     $('.search').click(function() {
         $(".insert").toggle("slide");
     });
