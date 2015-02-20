@@ -9,6 +9,7 @@ var display = "";
 var up_date = "";
 var weather = "";
 var image = "";
+var icon = "";
 var far = "";
 var celcios = "";
 var wind = "";
@@ -26,6 +27,8 @@ var city = "";
 $(document).ready(function() {
     //$('#country').val(" ");
     //$('#city').val(" ");
+    $(".insert").hide("slide");
+    $(".screen2").hide("slide");
 
     $('#start').click(function() {
 
@@ -48,8 +51,8 @@ $(document).ready(function() {
             console.log(codigo);
             url = "http://api.wunderground.com/api/8b7e28d768cfa522/conditions/q/"+codigo+"/"+city+".json";
             $('#start').hide();
-            $('.screen').append("<p class =\"pai\"> Pais : "+ pais +"</p>");
-            $('.screen').append("<p class =\"cod\"> Codigo: "+ codigo +"</p></br></br>");
+            $('.screen1').append("<p class =\"pai\">  * Pais : "+ pais +"</p>");
+            $('.screen1').append("<p class =\"cod\">  * Codigo: "+ codigo +"</p></br>");
             console.log(url);
 
             if (codigo.length != 0){
@@ -63,6 +66,7 @@ $(document).ready(function() {
                         up_date = parse_clima["current_observation"]["local_time_rfc822"];
                         weather = parse_clima["current_observation"]["weather"];
                         image = parse_clima["current_observation"]["icon_url"];
+                        icon = parse_clima["current_observation"]["icon"];
                         far = parse_clima["current_observation"]["temp_f"];
                         celcios = parse_clima["current_observation"]["temp_c"];
                         wind = parse_clima["current_observation"]["wind_string"];
@@ -70,28 +74,44 @@ $(document).ready(function() {
                         pressure = parse_clima["current_observation"]["pressure_mb"];
                         visibility = parse_clima["current_observation"]["visibility_km"];
 
-                        $('.screen').append("<p class =\"display\"> Pais : "+ display +"</p>");
-                        $('.screen').append("<p class =\"up_date\"> Last Up Date: "+ up_date +"</p>");
-                        $('.screen').append("<p class =\"weather\"> Weather: "+ weather +"</p>");
-
-                        $('.screen').append("<img class =\"up_date\" src= \""+ image +"\" alt =\"Imagen Clima\">");
-
-                        $('.screen').append("<p class =\"f\"> Temperatura : "+ far +" °F</p>");
-                        $('.screen').append("<p class =\"c\"> Temperatura : "+ celcios +" °C</p>");
-                        $('.screen').append("<p class =\"wind\"> Wind : "+ wind +"</p>");
-                        $('.screen').append("<p class =\"humidity\"> Humidity : "+ humidity +"</p>");
-                        $('.screen').append("<p class =\"pressure\"> Pressure : "+ pressure +" hPa</p>");
-                        $('.screen').append("<p class =\"visibility\"> Visibility : "+ visibility +" Km</p>");
-
-
-
-
+                        $('.screen2').append("<p class =\"display\">"+ display +"</p><hr>");
                         
 
+                        $('.screen2').append("<img class =\"cloud\" src= \""+ image +"\" alt =\"Imagen Clima\">");
+                        $('.screen2').append("<p class =\"icon\">"+ icon.toUpperCase() +"</p></br><hr>");
+
+                        /* Celcious Temperature */
+                        $('.screen2').append("<p class =\"cel\"> Temperatura °C:</p> ");
+                        $('.screen2').append("<p class =\"tc\">"+celcios+" °C</p>");
+
+                        /*Farenheight Temperature */
+                        $('.screen2').append("<p class =\"far\"> Temperatura °F:</p>");
+                        $('.screen2').append("<p class =\"tf\">"+far+" °F</p>");
+
+                        /* up_date */
+                        $('.screen2').append("<p class =\"up_date\"> Last Up Date: "+ up_date +"</p>");
+                        /*Weather*/
+                        $('.screen2').append("<p class =\"weather\"> Weather: "+ weather +"</p>");
+
+                        /*Wind*/
+                        $('.screen2').append("<p class =\"wind\"> Wind : "+ wind +"</p>");
+
+                        /*Humidity*/
+                        $('.screen2').append("<p class =\"humidity\"> Humidity : "+ humidity +"</p>");
+
+                        /*Preasure*/
+                        $('.screen2').append("<p class =\"pressure\"> Pressure : "+ pressure +" hPa</p>");
+
+                        /*Visibility*/
+                        $('.screen2').append("<p class =\"visibility\"> Visibility : "+ visibility +" Km</p>");
+
+                        /*
+                        $(".tc").hide();
+                        $(".tf").hide();*/
+                        $(".screen2").show("slide");
                     }
             });
             });
-
             }
             else{
                 alert("Error Don't find Json");
@@ -102,33 +122,19 @@ $(document).ready(function() {
         else {
             alert("Input Error");
         }
-
-
     });
     
+    $('.could').click(function() {
+        alert("°C"); 
+       $('.tc').show('slide');
+    });
+    $('.search').click(function() {
+        $(".insert").toggle("slide");
+    });
+    
+    $('#dell').click(function() {
 
-    /*$(this).load("http://api.wunderground.com/api/8b7e28d768cfa522/conditions/q/"+String(codigo)+"/"+String(pais)+".json", function(data){
-    console.log("p "+pais);
-    console.log(codigo);
-    var clima = JSON.parse(data);
-
-    console.log(clima);
-    alert("p "+pais);
-    alert(codigo);
-
-    /*alert(display);
-    alert(far);
-	});
-
-    $('#boton2').click(function() {
-        alert("Weit!!!");
-        $('#boton2').hide();
+        location.reload();
     });
 
-    $('#boton2').click(function() {
-        alert("Weit!!!");
-        $('.screen').append("<p class =\"display\"> Pais : "+ display +"</p>");
-        $('.screen').append("<p class =\"f\"> Temperatura : "+ far +" °F</p>");
-        $('#boton2').hide();
-    });*/
- });
+ }); /*Document Ready*/

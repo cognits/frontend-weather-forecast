@@ -18,12 +18,121 @@
 	margin-top: 20px;
 }
 
+/* Div of Search Country */
+.insert{
+	margin-top: 50px;
+	margin-left: 340px;
+	width: 550px;
+	height: 140px;
+	border: 2px solid gray;
+	border-radius: 7px;
+}
+.search{
+	margin-left: 490px;
+	font-size: 20px;
+}
+.country{
+	margin-left: 20px;
+}
+.city{
+	margin-left: 50px;
+}
+.button{
+	margin-left: 110px;
+}
+.searching{
+	margin-left: 85px;
+}
+/* Div of Country and Code */
+.screen1{
+	margin-left: 550px;
+	font-size: 20px;
+	display: inline-block;
+}
+
 /* Body */
 body{
-	background-image: url('http://www.fondox.net/wallpapers/la-torre-eiffel-al-atardecer-1334.jpg');  
+	background-image: url('http://img.fondosypantallas.com/wp-content/uploads/2008/12/ph-10165.jpg');
+	cursor: url("http://u.jimdo.com/www21/o/s4e9df44a0ad8ccd8/img/i0ebb25453c3942ad/1391502327/thumb/image.png"),default; 
 }
 
 /* Botones */
 .buton{
 	display: inline-block; 
+}
+
+/****** All Div of the Weather ******/
+.screen2{
+	margin-left: 150px;
+	width: 950px;
+	height: 540px;
+	border: 2px solid gray;
+	border-radius: 7px;
+	font-size: 20px;
+}
+.display{
+	margin-left: 30px;
+	font-size: 30px;
+}
+
+.cloud{
+	margin-left: 50px;
+	width: 120px;
+	height: 100px;
+}
+.icon{
+	margin-left: 30px;
+}
+/* Temp - °C */
+.cel{
+	margin-top: -180px;
+	margin-left: 250px;
+	font-size: 20px;
+}
+.tc{
+	margin-left: 300px;
+	font-size: 30px;
+}
+
+/* Temp - °F */
+.far{
+	margin-top: -120px;
+	margin-left: 580px;
+}
+.tf{
+	margin-left: 620px;
+	font-size: 30px;
+}
+
+/* Up_date */
+.up_date{
+	margin-top: 100px;
+	margin-left: 20px;
+}
+
+/* wheather */
+.weather{
+	margin-left: 20px;
+}
+
+/*Wind*/
+.wind{
+	margin-left: 20px;
+}
+
+.humidity{
+	margin-left: 20px;
+}
+
+/*preasure*/
+.pressure{
+	margin-top: -132px;
+	margin-left: 500px;
+}
+
+/*Visibility*/
+.visibility{
+
+	margin-left: 500px;
+
 }

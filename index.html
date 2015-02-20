@@ -36,20 +36,24 @@ la estructura correta y guardar TODO tu CSS en el archivo styles.css
         <p class="title"> Weather - Forecast </p>
     </div>
     <hr class="separators">
-
-    <!-- Imputs of Dates -->
-    <p class="searching">Insert Country » <input name="pais" id="country" type="text" placeholder="Country"/></p>
-    <p class="searching">Insert City » <input name="ciudad" id="city" type="text" placeholder="City"/></p>
-    <button class ="button" id ="dell">Reset Here!!</buton>
-    <button class ="button" id="start">Press Here!</button> 
-    <button class ="button" id="boton2">Clima Here!</button><br/>
+    <p class="search"> »»» Press to Search »»» </p>
+    <div class= "insert"> 
+        <!-- Imputs of Dates -->
+        <p class="searching">Insert Country » <input name="pais" class="country" type="text" placeholder="Country"/></p>
+        <p class="searching">Insert City » <input name="ciudad" class="city" type="text" placeholder="City"/></p>
+        <!--<br> <input type="Radio" name="colorin" value="ff0000"> Rojo</br> -->
+        <button class ="button" id ="dell">Reset Here!!</buton>
+        <button class ="button" id="start">Press Here!</button><br/>
+    </div>
     
     
+    <!-- Div of the Country and Code -->
+    <div class="screen1"> </div>
     <!-- Div of the Screen -->
-    <div class="screen"> </div>
+    <div class="screen2"> </div>
 
     <!-- JQuery -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/script.js"></script>
