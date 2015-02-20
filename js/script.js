@@ -131,13 +131,11 @@ $(document).ready(function() {
     });
     
     $('.r1').click(function(){
-        alert('°C');
         radio_c = 1;
         radio_f = 0;
     });
 
     $('.r2').click(function(){
-        alert('°F');
         radio_c = 0;
         radio_f = 1;
     });
