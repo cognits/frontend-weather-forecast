@@ -1,7 +1,7 @@
 // Javascript Code.
 //Variables
 var pais = "";
-var codigo = "";
+var code = "";
 
 //**** Json Appi  Variables ****
 var url = "";
@@ -31,8 +31,8 @@ $(document).ready(function() {
     $(".insert").hide("slide");
     $(".screen2").hide("slide");
 
+    //Button Start
     $('#start').click(function() {
-
         country = $("input[name=pais]").val();
         city = $("input[name=ciudad]").val();
 
@@ -41,28 +41,34 @@ $(document).ready(function() {
             $(this).load("paises.json", function(data){
             var paises = JSON.parse(data);
 
+            //Search countrys in my Json
             for (var i = 0; i <= 242; i++) {
                 if (((paises[i]["name"]).toLowerCase()) == country.toLowerCase()){
                     pais = paises[i]["name"];
-                    codigo = paises[i]["code"];
+                    code = paises[i]["code"];
                 };
             };
 
             console.log(pais);
             console.log(codigo);
             url = "http://api.wunderground.com/api/8b7e28d768cfa522/conditions/q/"+codigo+"/"+city+".json";
+
+            //After of press the buton, he hide 
             $('#start').hide();
+
+            //Display the Country and Code
             $('.screen1').append("<p class =\"pai\">  * Pais : "+ pais +"</p>");
-            $('.screen1').append("<p class =\"cod\">  * Codigo: "+ codigo +"</p></br>");
+            $('.screen1').append("<p class =\"cod\">  * Codigo: "+ code +"</p></br>");
             console.log(url);
 
-            if (codigo.length != 0){
+            if (code.length != 0){
                 jQuery(document).ready(function($) { 
                     $.ajax({ 
                         url : url, 
                         dataType : "jsonp",
                         success : function(parse_clima) {
 
+                            //Variables
                             display = parse_clima["current_observation"]["display_location"]["full"];
                             up_date = parse_clima["current_observation"]["local_time_rfc822"];
                             weather = parse_clima["current_observation"]["weather"];
@@ -75,12 +81,13 @@ $(document).ready(function() {
                             pressure = parse_clima["current_observation"]["pressure_mb"];
                             visibility = parse_clima["current_observation"]["visibility_km"];
 
+
+                            //Add the Div Screen 2
                             $('.screen2').append("<p class =\"display\">"+ display +"</p><hr>");
                             
-
+                            /* Logo Cognits */
                             $('.screen2').append("<img class =\"cloud\" src= \""+ image +"\" alt =\"Imagen Clima\">");
                             $('.screen2').append("<p class =\"icon\">"+ icon.toUpperCase() +"</p></br><hr>");
-
 
                             if (radio_c == 1){
                                 /* Celcious Temperature */
@@ -93,6 +100,7 @@ $(document).ready(function() {
                             }
                             /* up_date */
                             $('.screen2').append("<p class =\"up_date\"> Last Up Date: "+ up_date +"</p>");
+                            
                             /*Weather*/
                             $('.screen2').append("<p class =\"weather\"> Weather: "+ weather +"</p>");
 
@@ -129,23 +137,28 @@ $(document).ready(function() {
             alert("Input Error");
         }
     });
-    
+    //Radio Celcious
     $('.r1').click(function(){
         radio_c = 1;
         radio_f = 0;
     });
 
+    //Radio Fahrenheit
     $('.r2').click(function(){
         radio_c = 0;
         radio_f = 1;
     });
 
+    //Text Press for Search
     $('.search').click(function() {
         $(".insert").toggle("slide");
     });
-    
-    $('#dell').click(function() {
 
+    
+    //Button Delete
+    $('#dell').click(function() {
+        $(".country").val("");
+        $(".city").val("");
         location.reload();
     });
 

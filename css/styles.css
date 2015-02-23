@@ -4,7 +4,7 @@
 	width: 1285px;
 	height: 110px;
 }
-
+/*Title of the Weather*/
 .title{
 	color: white;
 	font-size: 40px;
@@ -12,7 +12,7 @@
 	margin-top: -70px;
 	margin-left: 700px;
 }
-
+/*Cognits Logo*/
 .logo{
 	margin-left: 30px;
 	margin-top: 20px;
@@ -27,22 +27,30 @@
 	border: 2px solid gray;
 	border-radius: 7px;
 }
+/*Text of Search */
 .search{
 	margin-left: 490px;
 	font-size: 20px;
 }
+
+/*TextBox: Country and City */
 .country{
 	margin-left: 20px;
 }
 .city{
 	margin-left: 50px;
 }
+
+/*Buttons of the Search and Dell*/
 .button{
 	margin-left: 110px;
 }
+/*Parraphs of the Country and City*/
 .searching{
 	margin-left: 85px;
 }
+
+/*RadioButton: °C/°F*/
 .rc{
 	margin-left: 100px;
 }
@@ -79,11 +87,14 @@ body{
 	border-radius: 7px;
 	font-size: 20px;
 }
+
+/* Last Up Date */
 .display{
 	margin-left: 30px;
 	font-size: 30px;
 }
 
+/*Image of Cloud and Text*/
 .cloud{
 	margin-left: 50px;
 	width: 120px;
@@ -92,6 +103,7 @@ body{
 .icon{
 	margin-left: 30px;
 }
+
 /* Temp - °C  / °F */
 .temp_c_f{
 	margin-top: -180px;
@@ -127,12 +139,12 @@ body{
 /*preasure*/
 .pressure{
 	margin-top: -132px;
-	margin-left: 500px;
+	margin-left: 650px;
 }
 
 /*Visibility*/
 .visibility{
 
-	margin-left: 500px;
+	margin-left: 650px;
 
 }
