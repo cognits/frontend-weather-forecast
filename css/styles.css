@@ -1,8 +1,19 @@
+h1 {
+    font-family: 'Righteous', cursive;
+}
 
+p {
+    font-family: 'Questrial', sans-serif;
+}
 
-.main_column {
-    background-color: rgba(41,54,116,0.7);
+.center_column {
+    background-color: rgba(208,208,208,0.8);
     margin: auto;
     width: 85%;
     border-radius: 10px;
+    margin-bottom: 2%;
+}
+
+.container_forms {
+    background-color: rgba(255,255,255,0.8);
 }
