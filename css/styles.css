@@ -1,20 +1,27 @@
 h1 {
+    color: black;
     font-family: 'Righteous', cursive;
     text-shadow: 1px 2px 2px #FFFFFF;
 }
 
 h3 {
+    color: black;
     font-family: 'Righteous', cursive;
     margin-bottom: 2%;
 }
 
 p {
+    color: black;
     font-size: 110%;
     font-family: 'Questrial', sans-serif;
 }
 
+button {
+    margin-top: 3%;
+}
+
 .contenedor {
-    padding-top: 1%;
+    padding-top: 3%;
 }
 
 .up {
@@ -36,3 +43,4 @@ p {
     padding-bottom: 2%;
     background-color: rgba(255,255,255,0.8);
 }
+
