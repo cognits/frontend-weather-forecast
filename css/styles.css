@@ -1,19 +1,38 @@
 h1 {
     font-family: 'Righteous', cursive;
+    text-shadow: 1px 2px 2px #FFFFFF;
 }
 
-p {
-    font-family: 'Questrial', sans-serif;
-}
-
-.center_column {
-    background-color: rgba(208,208,208,0.8);
-    margin: auto;
-    width: 85%;
-    border-radius: 10px;
+h3 {
+    font-family: 'Righteous', cursive;
     margin-bottom: 2%;
 }
 
+p {
+    font-size: 110%;
+    font-family: 'Questrial', sans-serif;
+}
+
+.contenedor {
+    padding-top: 1%;
+}
+
+.up {
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+}
+
+.center_column {
+    text-align: center;
+    background-color: rgba(39,71,137,0.8);
+    margin: auto;
+    width: 85%;
+    border-radius: 10px;
+    margin-bottom: 2.5%;
+}
+
 .container_forms {
+    padding-top: 1%;
+    padding-bottom: 2%;
     background-color: rgba(255,255,255,0.8);
 }
