@@ -1,12 +1,135 @@
 body{
-    background: #4d009a;
+    margin: 0.1%
+}
+.menu{
+    height: 100%;
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+    background-position: bottom 100%; 
+    font-family:'Source Sans Pro', sans-serif;
+    color: white;
+    background-image:url(../images/fondoprin1.jpg);
 }
 
+
+
+
+.cognits{
+    font-size: 190%;
+    margin-left: 1%
+}
 .title{
-    background-color: gray; opacity: 0.2;
+    text-align: center;
+}
+.entering{
+    text-align: center;
+    border-radius: 3px;
+    margin-top: 4%;
+    margin-bottom: 5%;
+}
+.type_tem{
     display: inline-block;
-    border-radius: 5%;
-    font-size: 15px;
-    font-family: 'Source Sans Pro', sans-serif;
+    margin: 1%;
+}
+.search{
+    font-size: 20px;
+    color:#ffffff;
+    cursor:pointer;
+
+}
+.hover_button{
+    color:#1a73cb;
+    border: 2px solid #bbbbbb;
+    -webkit-box-shadow: 0 0 15px #a7a7a7;
+    -moz-box-shadow: 0 0 15px #a7a7a7;
+    box-shadow: 0 0 15px #a7a7a7;
+}
+.clima{
+    display: none;
+}
+.oculto{
+    background-image:url(../images/nub_edit.jpg);
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+     background-position: bottom 100%; 
+    font-family:'Source Sans Pro', sans-serif;
     color: white;
+
+}
+.location{
+    margin-bottom: 5%;
+    margin-left: 5%;
+}
+.country{
+    font-size: 500%;
+    margin-bottom: 3%;
+    margin-top: 0.1%;
+}
+
+.TempBig{
+    width: 200px;
+    height: 100px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 6%;
+    margin-left: 5%;
+}
+.tempC{
+    font-size: 600%;
+    margin: 1%;
+    margin-bottom:2%;
+}
+
+.weather{
+    font-size:30px ;
+    margin: 1%;
+}
+
+.dewpoint_string{
+    font-size:30px ;
+    margin: 1%;
+}
+
+.frames{
+    float: right;
+    margin-right: 5%;
+    margin-top: 5%
+}
+.TempF{
+    text-align: center;
+    font-size: 25px;
+    width: 100px;
+    height: 100px;
+
+    border-radius: 5px;
+    display: inline-block;
+}
+.visibility_km{
+    text-align: center;
+    font-size: 25px;
+    width: 100px;
+    height: 100px;
+
+    border-radius: 5px;
+    display: inline-block;
+}
+.relative_humidity{
+    text-align: center;
+    font-size: 25px;
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    display: inline-block;
+}
+.wind_string{
+    text-align: center;
+    font-size: 25px;
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    display: inline-block;
+}
+.update{
+
+    margin-right: 5px;
 }

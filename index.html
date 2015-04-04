@@ -15,6 +15,7 @@ la estructura correta y guardar TODO tu CSS en el archivo styles.css
         <link rel="icon" href="http://getbootstrap.com/favicon.ico">
         <title>Cognits Blog</title>
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300' rel='stylesheet' type='text/css'>
+
         <!-- Bootstrap core CSS -->
         <link href="css/bootstrap.css" rel="stylesheet">
 
@@ -31,18 +32,74 @@ la estructura correta y guardar TODO tu CSS en el archivo styles.css
     </head>
 
     <body>
-        <div class= "container-fluid">
-                <div class="center_column title">
-                <h1>Cognits Wather</h1>
+    <div class="container">
+        <div id="menu"class="menu"  class="center_column up" >
+            <div class="cognits">Cognits </div>
+            <div class="title" style="background-color: rgba(0, 0, 0, 0.8)">
+                <h1>Weather forecast</h1>
+                <h2>An easy way to know the weather conditions anywhere.</h2>
             </div>
-            <input type="text" name="checkListItem1" maxlength="140" id="country" class="form-control" onfocus="javascript:this.value=''"/>
+            <div class="entering" style="background-color: rgba(0, 0, 0, 0.8)">
+                <h2>Enter country</h2>
+                <input type="text" name="checkListItem1" maxlength="140" id="clcoment1" class="form-control" onfocus="javascript:this.value=''"/>
+                <h2>Enter state</h2>
+                <input type="text" name="checkListItem2" maxlength="140" id="clcoment2" class="form-control" onfocus="javascript:this.value=''"/>
+                <h2>Select how to display temperature</h2>
+                <input class= "centi" type="Radio" name="centigrados" value=""><p class="type_tem"> °C </p>
+                <input class= "fahren" type="Radio" name="fahrenheit" value=""><p class="type_tem"> °F </p>
+                <br/>
+                <h3 class="search" id="hola">search</h3>
+                <br/>
+                <br/>
+            </div>
+            <br/>
+        </div>
+
+
+
+
+
+            <div class="clima">
+            <div class="oculto">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="location">
+                        <p class="country">Guatemala</p>
+                        <h1 class="city">Peten</h1>
+                        <h1 class="state">san jose</h1>
+                    </div>
+                </div>
+            </div>
+                    <div class="TempBig">
+                        <p class="tempC">34C*</p>
+                        <p class="weather">nublado</p>
+                        <p class="dewpoint_string"> 0093C*
+                        </p>
+                        <div class="icon"> <img src="http://icons-ak.wxug.com/i/c/k/partlycloudy.gif"></div>
+                    </div>
+
+                    <div class="frames">
+                        <div class="TempF" style="background-color: rgba(0, 0, 0, 0.5)">96F*
+                        </div>
+                        <div class="visibility_km" style="background-color: rgba(0, 0, 0, 0.5)">96km
+                        </div>
+                        <div class="relative_humidity" style="background-color: rgba(0, 0, 0, 0.5)">50%
+                        </div>
+                        <div class="wind_string" style="background-color: rgba(0, 0, 0, 0.5)">90km/h
+                        </div>
+                    </div>
+
+
+                <div class="observation_time update">ultima actualizacion
+                </div>
+            </div>
+        </div>
         </div><!--Ehd the Container-->
 
-        <!-- Bootstrap core JavaScript
-        ================================================== -->
-        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="js/libs/jquery-2.1.1.js"></script>
         <script src="js/script.js"></script>
-        <script src="js/bootstrap.js"></script>
+        <script src="js/bootstrap.js"></script> 
+<!--26ad6a3bc69f7ee2-->
 
     </body>
 </html>
