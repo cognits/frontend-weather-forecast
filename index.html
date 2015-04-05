@@ -31,36 +31,32 @@ la estructura correta y guardar TODO tu CSS en el archivo styles.css
 
     </head>
 
-    <body>
+    <body id="background" class="first" class="second" >
+
     <div class="container">
-        <div id="menu"class="menu"  class="center_column up" >
+        <div class="menu" class="center_column up" >
             <div class="cognits">Cognits </div>
             <div class="title" style="background-color: rgba(0, 0, 0, 0.8)">
-                <h1>Weather forecast</h1>
-                <h2>An easy way to know the weather conditions anywhere.</h2>
+                <p class="title1">Weather forecast</p>
+                <p class="cognits">An easy way to know the weather conditions anywhere.</p>
             </div>
             <div class="entering" style="background-color: rgba(0, 0, 0, 0.8)">
-                <h2>Enter country</h2>
-                <input type="text" name="checkListItem1" maxlength="140" id="clcoment1" class="form-control" onfocus="javascript:this.value=''"/>
-                <h2>Enter state</h2>
-                <input type="text" name="checkListItem2" maxlength="140" id="clcoment2" class="form-control" onfocus="javascript:this.value=''"/>
-                <h2>Select how to display temperature</h2>
-                <input class= "centi" type="Radio" name="centigrados" value=""><p class="type_tem"> °C </p>
-                <input class= "fahren" type="Radio" name="fahrenheit" value=""><p class="type_tem"> °F </p>
-                <br/>
-                <h3 class="search" id="hola">search</h3>
+                    <p class="pnew">Enter country</p>
+                    <input type="text" name="checkListItem1" maxlength="140" id="clcoment1" class="form-control" onfocus="javascript:this.value=''"/>
+                    <p>Enter state</p>
+                    <input type="text" name="checkListItem2" maxlength="140" id="clcoment2" class="form-control" onfocus="javascript:this.value=''"/>
+                    <p>Select how to display temperature</p>
+                    <input class= "centi" type="Radio" name="centigrados" value=""><p class="type_tem"> °C </p>
+                    <input class= "fahren" type="Radio" name="fahrenheit" value=""><p class="type_tem"> °F </p>
+                    <br/>
+                    <div>Search</div>
                 <br/>
                 <br/>
             </div>
             <br/>
         </div>
 
-
-
-
-
-            <div class="clima">
-            <div class="oculto">
+        <div class="clima">
             <div class="row">
                 <div class="col-xs-12">
                     <div class="location">
@@ -70,6 +66,8 @@ la estructura correta y guardar TODO tu CSS en el archivo styles.css
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-xs-12">
                     <div class="TempBig">
                         <p class="tempC">34C*</p>
                         <p class="weather">nublado</p>
@@ -77,7 +75,6 @@ la estructura correta y guardar TODO tu CSS en el archivo styles.css
                         </p>
                         <div class="icon"> <img src="http://icons-ak.wxug.com/i/c/k/partlycloudy.gif"></div>
                     </div>
-
                     <div class="frames">
                         <div class="TempF" style="background-color: rgba(0, 0, 0, 0.5)">96F*
                         </div>
@@ -88,17 +85,17 @@ la estructura correta y guardar TODO tu CSS en el archivo styles.css
                         <div class="wind_string" style="background-color: rgba(0, 0, 0, 0.5)">90km/h
                         </div>
                     </div>
-
-
-                <div class="observation_time update">ultima actualizacion
+                    <div class="observation_time update" id="reset">ultima actualizacion</div>
                 </div>
             </div>
         </div>
-        </div><!--Ehd the Container-->
+    </div><!--Ehd the Container-->
 
         <script src="js/libs/jquery-2.1.1.js"></script>
         <script src="js/script.js"></script>
         <script src="js/bootstrap.js"></script> 
+        <script src="js/libs/bootstrap.js"></script>
+        <script type="text/javascript" src="/js/jquery-1.4.2.js"></script>
 <!--26ad6a3bc69f7ee2-->
 
     </body>
