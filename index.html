@@ -13,15 +13,15 @@ la estructura correta y guardar TODO tu CSS en el archivo styles.css
         <meta name="description" content="">
         <meta name="author" content="">
         <link rel="icon" href="http://getbootstrap.com/favicon.ico">
+
         <title>Cognits Blog</title>
-<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300' rel='stylesheet' type='text/css'>
 
         <!-- Bootstrap core CSS -->
         <link href="css/bootstrap.css" rel="stylesheet">
 
         <!-- Custom styles for this template -->
         <link href="css/styles.css" rel="stylesheet">
-
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300' rel='stylesheet' type='text/css'>
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -33,30 +33,36 @@ la estructura correta y guardar TODO tu CSS en el archivo styles.css
 
     <body id="background" class="first" class="second" >
 
-    <div class="container">
-        <div class="menu" class="center_column up" >
-            <div class="cognits">Cognits </div>
-            <div class="title" style="background-color: rgba(0, 0, 0, 0.8)">
-                <p class="title1">Weather forecast</p>
-                <p class="cognits">An easy way to know the weather conditions anywhere.</p>
+    <div class="container-fluid">
+        <div class="menu" class="col-md-12">
+            <div class="row">
+            <div class="center_column up">
+                <div class="cognits" >Cognits </div>
+                <div class="title" style="background-color: rgba(0, 0, 0, 0.8)">
+                    <p class="title1">Weather forecast</p>
+                    <p class="cognits">An easy way to know the weather conditions anywhere.</p>
+                </div>
             </div>
-            <div class="entering" style="background-color: rgba(0, 0, 0, 0.8)">
+            </div>
+            <div class="center_column up">
+            <div class="entering" style="background-color: rgba(0, 0, 0, 0.8)" class="col-md-12">
                     <p class="pnew">Enter country</p>
-                    <input type="text" name="checkListItem1" maxlength="140" id="clcoment1" class="form-control" onfocus="javascript:this.value=''"/>
-                    <p>Enter state</p>
-                    <input type="text" name="checkListItem2" maxlength="140" id="clcoment2" class="form-control" onfocus="javascript:this.value=''"/>
-                    <p>Select how to display temperature</p>
+                    <input type="text" name="checkListItem1" maxlength="140" id="clcoment1" class="sizein" onfocus="javascript:this.value=''"/>
+                    <p class="pnew">Enter state</p>
+                    <input type="text" name="checkListItem2" maxlength="140" id="clcoment2" class="sizein" onfocus="javascript:this.value=''"/>
+                    <p class="pnew">Select how to display temperature</p>
                     <input class= "centi" type="Radio" name="centigrados" value=""><p class="type_tem"> °C </p>
                     <input class= "fahren" type="Radio" name="fahrenheit" value=""><p class="type_tem"> °F </p>
                     <br/>
-                    <div>Search</div>
+                    <div id="search" class="pnew cursor" style="display:scroll;bottom:10px;right:10px;" onclick ="abajo()" onmouseover="stopScroll()" title="Search">Search</div>
                 <br/>
                 <br/>
+            </div>
             </div>
             <br/>
         </div>
 
-        <div class="clima">
+        <div class="clima" id="oculto">
             <div class="row">
                 <div class="col-xs-12">
                     <div class="location">
@@ -85,17 +91,21 @@ la estructura correta y guardar TODO tu CSS en el archivo styles.css
                         <div class="wind_string" style="background-color: rgba(0, 0, 0, 0.5)">90km/h
                         </div>
                     </div>
+                    <br/>
+                    <br/>
                     <div class="observation_time update" id="reset">ultima actualizacion</div>
+                    <div class="newSearch cursor" style="display:scroll;bottom:40px;right:10px;" onclick ="subir()" onmouseover="stopScroll()" title="New Search">New Search</div>
                 </div>
             </div>
         </div>
     </div><!--Ehd the Container-->
 
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
         <script src="js/libs/jquery-2.1.1.js"></script>
         <script src="js/script.js"></script>
-        <script src="js/bootstrap.js"></script> 
-        <script src="js/libs/bootstrap.js"></script>
-        <script type="text/javascript" src="/js/jquery-1.4.2.js"></script>
+        <script src="js/bootstrap.js"></script>
 <!--26ad6a3bc69f7ee2-->
 
     </body>
