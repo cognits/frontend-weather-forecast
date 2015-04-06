@@ -2,6 +2,7 @@
 <!-- saved from url=(0039)http://getbootstrap.com/examples/blog/# -->
 <html lang="en">
     <head>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -39,14 +40,23 @@
             <div class="center_column container_forms">
                 <h3>Type a Country</h3>
                 <form name="country_form">
-                    <input type="text" />
+                    <input type="text" name="country" id="country" value="" onfocus="javascript:this.value=''" />
                 </form>
 
                 <h3>Type a State</h3>
                 <form name="state_form">
-                    <input type="text" />
+                    <input type="text" name="province" value="" onfocus="javascript:this.value=''" />
                 </form>
-                <button type="button" class="btn btn-success">VIEW WEATHER FORECAST</button>
+
+
+                <h3 class="temperature">Temperature</h3>
+                <div class="check_containter">
+                    <form name="measurement_system">
+                        <input type="radio" name="temperature" value="Celsius" class="celsius" /> Celsius
+                        <input type="radio" name="temperature" value="Fahrenheit" class="fahrenheit" /> Fahrenheit
+                    </form>
+                </div>
+                <button type="button" class="btn btn-success view_weather">VIEW WEATHER FORECAST</button>
             </div>
         </div>
 

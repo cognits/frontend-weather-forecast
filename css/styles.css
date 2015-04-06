@@ -20,6 +20,11 @@ button {
     margin-top: 3%;
 }
 
+.temperature {
+    margin-top: 3%;
+    margin-bottom: 1%;
+}
+
 .contenedor {
     padding-top: 3%;
 }
@@ -44,3 +49,13 @@ button {
     background-color: rgba(255,255,255,0.8);
 }
 
+.check_containter {
+    font-family: 'Questrial', sans-serif;
+    font-size: 120%;
+    margin: auto;
+    width: 200px;
+}
+
+.view_weather {
+    margin-top: 5%;
+}
