@@ -1,3 +1,7 @@
+body {
+    background-image: url(../images/cielo3.png);
+}
+
 h1 {
     color: black;
     font-family: 'Righteous', cursive;
@@ -36,6 +40,7 @@ button {
 
 .center_column {
     text-align: center;
+    background-color: #274789;
     background-color: rgba(39,71,137,0.8);
     margin: auto;
     width: 85%;
@@ -46,6 +51,7 @@ button {
 .container_forms {
     padding-top: 1%;
     padding-bottom: 2%;
+    background-color: white;
     background-color: rgba(255,255,255,0.8);
 }
 
