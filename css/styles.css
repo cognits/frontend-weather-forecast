@@ -58,7 +58,7 @@ body{
 .type_tem{
     display: inline-block;
     margin: 1%;
-    font-size: 25px;
+    font-size: 250%;
 }
 
 .cursor{
@@ -83,12 +83,10 @@ body{
 }
 
 .TempBig{
-    width: 200px;
-    height: 100px;
     border-radius: 5px;
     display: inline-block;
     margin-top: 5%;
-    margin-left: 5%;
+    margin-left: 10%;
 }
 
 .tempC{
@@ -108,47 +106,46 @@ body{
 }
 
 .frames{
-    float: right;
-    margin-right: 5%;
-    margin-top: 5%
+    float:center;
+    margin-top: 5%;
 }
 
 .TempF{
-    margin-top: 5%;
+    margin: 2%;
+    font-size: 3rem;
+    height: 180px;
+    width: 150px;
     text-align: center;
-    font-size: 25px;
-    width: 250px;
-    height: 150px;
     border-radius: 5px;
     display: inline-block;
 }
 
 .visibility_km{
-    margin-top: 5%;
+    margin: 2%;
+    font-size: 3rem;
+    height: 180px;
+    width: 150px;
     text-align: center;
-    font-size: 25px;
-    width: 250px;
-    height: 150px;
     border-radius: 5px;
     display: inline-block;
 }
 
 .relative_humidity{
-    margin-top: 5%;
+    margin: 2%;
+    font-size: 3rem;
+    height: 180px;
+    width: 150px;
     text-align: center;
-    font-size: 25px;
-    width: 250px;
-    height: 150px;
     border-radius: 5px;
     display: inline-block;
 }
 
 .wind_string{
-    margin-top: 5%;
+    margin: 2%;
+    font-size: 3rem;
+    height: 180px;
+    width: 150px;
     text-align: center;
-    font-size: 25px;
-    width: 250px;
-    height: 150px;
     border-radius: 5px;
     display: inline-block;
 }
@@ -160,7 +157,7 @@ body{
 }
 
 .newSearch{
-    margin-left: 5px;
+    margin-left: 5%;
     float: right;
     font-size: 150%;
 }
