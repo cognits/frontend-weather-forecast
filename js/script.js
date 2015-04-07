@@ -20,14 +20,15 @@ jQuery(document).ready(function($) {
                 };
 
                 if (code_country.length === 0) {
-                    alert("Sorry, we have no information of this country.")
+                    alert("Sorry, we have no information of this country.");
+                    $(".results_modal").modal('hide');
                 } else {
                     $.ajax({
                     url : "http://api.wunderground.com/api/0d95ff1db656d6bf/geolookup/conditions/q/"+code_country+"/"+province+".json",
                     dataType : "jsonp",
                     success : function(parsed_json) {
-                        console.log(parsed_json["response"]["error"])
                         if (parsed_json["response"]["error"]) {
+                            $(".results_modal").modal('hide');
                             alert("Sorry, " + parsed_json["response"]["error"]["description"])
                         } else {
                             var location = parsed_json['location']['city'];
