@@ -13,6 +13,7 @@
     }
 jQuery(document).ready(function($) {
 //The functionality of page
+    $('#search').click(function() {
 var hcountrie="";
 var hcity="";
 var hstate="";
@@ -26,8 +27,7 @@ var visibility="";
 var humidity="";
 var wind="";
 var codecountrie="";
-var type_tempe = $("input[name=temperature]:checked").val();
-    $('#search').click(function() {
+var mode_temp = $("input[name=temperature]:checked").val();
         country = $("input[name=Countrie]").val();
         state = $("input[name=State]").val();
         country = country.toLowerCase();
@@ -66,14 +66,11 @@ var type_tempe = $("input[name=temperature]:checked").val();
               url : "http://api.wunderground.com/api/f7b861602853b78f/geolookup/conditions/q/"+codecountrie+"/"+state+".json",
               dataType : "jsonp",
               success : function(parsed_json) {
-              console.log(type_tempe);
               var location = parsed_json['location']['city'];
               var temp_f = parsed_json['current_observation']['temp_f'];
               hcountrie = parsed_json["current_observation"]["display_location"]["full"];
               hcity = parsed_json["current_observation"]["display_location"]["country"];
               hstate = parsed_json["current_observation"]["display_location"]["state_name"];
-              tempf = parsed_json["current_observation"]["temp_f"];
-              tempc = parsed_json["current_observation"]["temp_c"];
               weather = parsed_json["current_observation"]["weather"];
               dewpoint = parsed_json["current_observation"]["dewpoint_string"];
               icon = parsed_json["current_observation"]["icon_url"];
@@ -81,14 +78,19 @@ var type_tempe = $("input[name=temperature]:checked").val();
               visibility = parsed_json["current_observation"]["visibility_km"];
               humidity = parsed_json["current_observation"]["relative_humidity"];
               wind = parsed_json["current_observation"]["wind_kph"];
-              if (type_tempe == "fahrenheit") {
-                $('.TempBig').append("<p class =\"tempC\">"+ tempf +" °F</p>");
-                  $('.TempF').append("<p>Celsius</p>"+"<p>"+tempc+"°C</p>");
-              } else if (type_tempe=="celsius") {
-                  $('.TempBig').append("<p class =\"tempC\">"+ tempc +" °C</p>");
-                  $('.TempF').append( "<p>fahrenheit</p>"+"<p>"+tempf+"°F</p>");
-              };
 
+
+              if (mode_temp === "Fahrenheit") {
+              tempf = parsed_json["current_observation"]["temp_f"];
+              tempc = parsed_json["current_observation"]["temp_c"];
+                $('.TempBig').append("<p class =\"tempC\">"+ tempf +" °F</p>");
+                $('.TempF').append( "<p>Celsius</p>"+"<p>"+tempc+"°C</p>");
+              } else {
+              tempc = parsed_json["current_observation"]["temp_c"];
+              tempf = parsed_json["current_observation"]["temp_f"];
+                $('.TempBig').append("<p class =\"tempC\">"+ tempc +" °C</p>");
+                $('.TempF').append( "<p>Fahrenheit</p>"+"<p>"+tempf+"°F</p>");
+              };
               $('.TempBig').append("<p class=\"weather\">"+weather+"</p>"+"<p class=\"dewpoint\">"+dewpoint+"</p>");
               $('.icon').append("<img src= \""+ icon +"\" alt =\"Image of weather\">");
               $('.location').append("<p class =\"country\">"+ hcountrie +"</p>"+"<h1 class=\"city\">"+hcity+"</h1>"+"<h1 class=\"state\">"+hstate+"</h1>");
