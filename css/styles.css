@@ -100,7 +100,7 @@ body{
     margin: 1%;
 }
 
-.dewpoint_string{
+.dewpoint{
     font-size:30px ;
     margin: 1%;
 }
@@ -112,7 +112,7 @@ body{
 
 .TempF{
     margin: 2%;
-    font-size: 3rem;
+    font-size: 2.5rem;
     height: 180px;
     width: 150px;
     text-align: center;
@@ -122,7 +122,7 @@ body{
 
 .visibility_km{
     margin: 2%;
-    font-size: 3rem;
+    font-size: 2.5rem;
     height: 180px;
     width: 150px;
     text-align: center;
@@ -132,7 +132,7 @@ body{
 
 .relative_humidity{
     margin: 2%;
-    font-size: 3rem;
+    font-size: 2.5rem;
     height: 180px;
     width: 150px;
     text-align: center;
@@ -142,7 +142,7 @@ body{
 
 .wind_string{
     margin: 2%;
-    font-size: 3rem;
+    font-size: 2.5rem;
     height: 180px;
     width: 150px;
     text-align: center;

@@ -51,8 +51,8 @@ la estructura correta y guardar TODO tu CSS en el archivo styles.css
                     <p class="pnew">Enter state</p>
                     <input type="text" name="State" maxlength="140" id="clcoment2" class="sizein" onfocus="javascript:this.value=''" title="Enter state" />
                     <p class="pnew">Select how to display temperature</p>
-                    <input class= "centi" type="Radio" name="temperature" value="" title="temperature in celsius" checked><p class="type_tem"> °C </p>
-                    <input class= "fahren" type="Radio" name="temperature" value="" title="temperature in fahrenheit"><p class="type_tem"> °F </p>
+                    <input class= "centi" type="Radio" name="temperature" value="celsius" title="temperature in celsius"><p class="type_tem"> °C </p>
+                    <input class= "fahren" type="Radio" name="temperature" value="fahrenheit" title="temperature in fahrenheit"><p class="type_tem"> °F </p>
                     <br/>
                     <div id="search" class="pnew cursor" type="button" style="display:scroll;bottom:10px;right:10px;" onclick ="abajo()" onmouseover="stopScroll()" title="Search">Search</div>
                 <br/>
@@ -65,9 +65,6 @@ la estructura correta y guardar TODO tu CSS en el archivo styles.css
             <div class="row">
                 <div class="col-md-12">
                     <div class="location">
-                        <p class="country">Guatemala</p>
-                        <h1 class="city">Peten</h1>
-                        <h1 class="state">san jose</h1>
                     </div>
                 </div>
             </div>
@@ -75,22 +72,18 @@ la estructura correta y guardar TODO tu CSS en el archivo styles.css
                 <div class="col-md-12">
                     <div class="col-md-4">
                         <div class="TempBig">
-                            <p class="tempC">34C*</p>
-                            <p class="weather">nublado</p>
-                            <p class="dewpoint_string"> 0093C*
-                            </p>
-                            <div class="icon"> <img src="http://icons-ak.wxug.com/i/c/k/partlycloudy.gif"></div>
+                            <div class="icon"></div>
                         </div>
                     </div>
                 <div class="col-md-8">
                     <div class="frames">
-                        <div class="TempF"  style="background-color: rgba(0, 0, 0, 0.5)"><p>96F*</p>
+                        <div class="TempF"  style="background-color: rgba(0, 0, 0, 0.5)">
                         </div>
-                        <div class="visibility_km"  style="background-color: rgba(0, 0, 0, 0.5)"><p>96km</p>
+                        <div class="visibility_km"  style="background-color: rgba(0, 0, 0, 0.5)"><p>Visibility</p>
                         </div>
-                        <div class="relative_humidity"  style="background-color: rgba(0, 0, 0, 0.5)"><p>50%</p>
+                        <div class="relative_humidity"  style="background-color: rgba(0, 0, 0, 0.5)"><p>Humidity</p>
                         </div>
-                        <div class="wind_string"  style="background-color: rgba(0, 0, 0, 0.5)"><p>90km/h</p>
+                        <div class="wind_string"  style="background-color: rgba(0, 0, 0, 0.5)"><p>Wind speed</p>
                         </div>
                     </div>
                 </div>
@@ -98,8 +91,8 @@ la estructura correta y guardar TODO tu CSS en el archivo styles.css
                 <br/>
                 <div class="row">
                 <div class="col-xs-12">
-                <div class="observation_time update" id="reset">ultima actualizacion</div>
-                <div class="newSearch cursor" style="display:scroll;bottom:40px;right:10px;" onclick ="subir()" onmouseover="stopScroll()" title="New Search">New Search</div>
+                <div class="observation_time update"></div>
+                <div class="newSearch cursor" style="display:scroll;bottom:40px;right:10px;" onclick ="subir()" onmouseover="stopScroll()" title="New Search" id="reset">New Search</div>
                 </div>
                 </div>
             </div>
