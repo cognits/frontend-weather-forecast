@@ -48,7 +48,6 @@ body{
 .sizein{
     height: 25px;
     width: 15%;
-
     -webkit-box-shadow: 0 0 3px #a7a7a7;
     -moz-box-shadow: 0 0 3px #a7a7a7;
     box-shadow: 0 0 3px #a7a7a7;
@@ -76,6 +75,10 @@ body{
     margin-left: 5%;
 }
 
+.fontsizesq{
+    font-size: 2.5rem;
+}
+
 .country{
     font-size: 500%;
     margin-bottom: 3%;
@@ -94,26 +97,26 @@ body{
     margin: 1%;
     margin-bottom:2%;
 }
+.senst{
+    font-size: 30px;
+}
+
 
 .weather{
-    font-size:30px ;
     margin: 1%;
 }
 
 .dewpoint{
-    font-size:30px ;
     margin: 1%;
 }
 
 .frames{
-    float:center;
     margin-top: 5%;
 }
 
 .TempF{
     margin-top: 5%;
     margin: 2%;
-    font-size: 2.5rem;
     height: 180px;
     width: 150px;
     text-align: center;
@@ -123,7 +126,6 @@ body{
 
 .visibility_km{
     margin: 2%;
-    font-size: 2.5rem;
     height: 180px;
     width: 150px;
     text-align: center;
@@ -133,7 +135,6 @@ body{
 
 .relative_humidity{
     margin: 2%;
-    font-size: 2.5rem;
     height: 180px;
     width: 150px;
     text-align: center;
@@ -143,7 +144,6 @@ body{
 
 .wind_string{
     margin: 2%;
-    font-size: 2.5rem;
     height: 180px;
     width: 150px;
     text-align: center;
@@ -151,14 +151,15 @@ body{
     display: inline-block;
 }
 
+.down{
+    font-size: 150%;
+}
 .update{
     margin-right: 5px;
     display: inline-block;
-    font-size: 150%;
 }
 
 .newSearch{
     margin-left: 5%;
     float: right;
-    font-size: 150%;
 }

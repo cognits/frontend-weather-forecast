@@ -91,7 +91,7 @@ var mode_temp = $("input[name=temperature]:checked").val();
                 $('.TempBig').append("<p class =\"tempC\">"+ tempc +" °C</p>");
                 $('.TempF').append( "<p>Fahrenheit</p>"+"<p>"+tempf+"°F</p>");
               };
-              $('.TempBig').append("<p class=\"weather\">"+weather+"</p>"+"<p class=\"dewpoint\">"+dewpoint+"</p>");
+              $('.TempBig').append("<p class=\"weather senst\">"+weather+"</p>"+"<p class=\"dewpoint senst\">"+dewpoint+"</p>");
               $('.icon').append("<img src= \""+ icon +"\" alt =\"Image of weather\">");
               $('.location').append("<p class =\"country\">"+ hcountrie +"</p>"+"<h1 class=\"city\">"+hcity+"</h1>"+"<h1 class=\"state\">"+hstate+"</h1>");
               $('.update').append("<p>"+update+"</p>");
