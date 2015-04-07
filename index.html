@@ -17,7 +17,7 @@ la estructura correta y guardar TODO tu CSS en el archivo styles.css
         <title>Cognits Blog</title>
 
         <!-- Bootstrap core CSS -->
-        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/ibs/bootstrap.css" rel="stylesheet">
 
         <!-- Custom styles for this template -->
         <link href="css/styles.css" rel="stylesheet">
@@ -47,12 +47,12 @@ la estructura correta y guardar TODO tu CSS en el archivo styles.css
             <div class="center_column up">
             <div class="entering" style="background-color: rgba(0, 0, 0, 0.8)" class="col-md-12">
                     <p class="pnew">Enter country</p>
-                    <input type="text" name="Countrie" maxlength="140" id="clcoment1" class="sizein" onfocus="javascript:this.value=''"/>
+                    <input type="text" name="Countrie" maxlength="140" id="clcoment1" class="sizein" onfocus="javascript:this.value=''" title="Enter countrie" />
                     <p class="pnew">Enter state</p>
-                    <input type="text" name="state" maxlength="140" id="clcoment2" class="sizein" onfocus="javascript:this.value=''"/>
+                    <input type="text" name="State" maxlength="140" id="clcoment2" class="sizein" onfocus="javascript:this.value=''" title="Enter state" />
                     <p class="pnew">Select how to display temperature</p>
-                    <input class= "centi" type="Radio" name="centigrados" value=""><p class="type_tem"> °C </p>
-                    <input class= "fahren" type="Radio" name="fahrenheit" value=""><p class="type_tem"> °F </p>
+                    <input class= "centi" type="Radio" name="temperature" value="" title="temperature in celsius" checked><p class="type_tem"> °C </p>
+                    <input class= "fahren" type="Radio" name="temperature" value="" title="temperature in fahrenheit"><p class="type_tem"> °F </p>
                     <br/>
                     <div id="search" class="pnew cursor" type="button" style="display:scroll;bottom:10px;right:10px;" onclick ="abajo()" onmouseover="stopScroll()" title="Search">Search</div>
                 <br/>
@@ -73,15 +73,15 @@ la estructura correta y guardar TODO tu CSS en el archivo styles.css
             </div>
             <div class="row">
                 <div class="col-md-12">
-                <div class="col-md-4">
-                    <div class="TempBig">
-                        <p class="tempC">34C*</p>
-                        <p class="weather">nublado</p>
-                        <p class="dewpoint_string"> 0093C*
-                        </p>
-                        <div class="icon"> <img src="http://icons-ak.wxug.com/i/c/k/partlycloudy.gif"></div>
+                    <div class="col-md-4">
+                        <div class="TempBig">
+                            <p class="tempC">34C*</p>
+                            <p class="weather">nublado</p>
+                            <p class="dewpoint_string"> 0093C*
+                            </p>
+                            <div class="icon"> <img src="http://icons-ak.wxug.com/i/c/k/partlycloudy.gif"></div>
+                        </div>
                     </div>
-                </div>
                 <div class="col-md-8">
                     <div class="frames">
                         <div class="TempF"  style="background-color: rgba(0, 0, 0, 0.5)"><p>96F*</p>
@@ -104,7 +104,7 @@ la estructura correta y guardar TODO tu CSS en el archivo styles.css
                 </div>
             </div>
         </div>
-</div>
+        </div>
     </div><!--Ehd the Container-->
 
         <!-- Bootstrap core JavaScript
@@ -112,7 +112,6 @@ la estructura correta y guardar TODO tu CSS en el archivo styles.css
         <!-- Placed at the end of the document so the pages load faster -->
         <script src="js/libs/jquery-2.1.1.js"></script>
         <script src="js/script.js"></script>
-        <script src="js/bootstrap.js"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
 <!--26ad6a3bc69f7ee2-->
 

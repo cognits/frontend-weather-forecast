@@ -1,7 +1,3 @@
-//<div onclick="addClass(this,'verde');">Pulse para Colorear de Verde</div>
-
-//<div class="rojo" onclick="removeClass(this,'rojo');">Pulse para Remover la clase Rojo</div>
-
 //The efects of the page
 $(document).ready(function(){
 $("#search").click(function () {
@@ -36,24 +32,44 @@ function stopScroll() {
 clearTimeout(scrolldelay);
 }//End the efect slide
 
-//The functionality of page
-    $('#search').click(function() {
-
-        country = $("input[name=country]").val();
-        state = $("input[name=state]").val();
 
 jQuery(document).ready(function($) {
+//The functionality of page
+    $('#search').click(function() {
+var codecountrie="";
+        country = $("input[name=Countrie]").val();
+        state = $("input[name=State]").val();
+
+        if (country.length !=0 && state.length !=0){
+          $.ajax({
+          url : "countries.json",
+          dataType : "json",
+          success : function(parsed_json) {
+            for (var i=0; i <= 242; i++) {
+           if (parsed_json[i]["name"].toLowerCase() === country) {
+                        codecountrie= parsed_json[i]["code"]
+                };
+                console.log(codecountrie);
+            };
+          }
+          });
+
+
   $.ajax({
-  url : "http://api.wunderground.com/api/f7b861602853b78f/geolookup/conditions/q/"+country+"/"+state+".json",
+  url : "http://api.wunderground.com/api/f7b861602853b78f/geolookup/conditions/q/"+codecountrie+"/"+state+".json",
   dataType : "jsonp",
   success : function(parsed_json) {
   var location = parsed_json['location']['city'];
   var temp_f = parsed_json['current_observation']['temp_f'];
   alert("Current temperature in " + location + " is: " + temp_f);
-  display = parse_clima["current_observation"]["display_location"]["full"];
-
-  $('.tempC').append("<p class =\"tempC\">"+ display +"</p><hr>");
   }
   });
+        } else{
+            alert("hola que hace");
+        };
+
+
+
 });
+
 });
