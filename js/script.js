@@ -10,6 +10,7 @@
     function stopScroll() {
     clearTimeout(scrolldelay);
     }
+var parse2="";
 jQuery(document).ready(function($) {
 //The functionality of page
     $('#search').click(function() {
@@ -23,10 +24,10 @@ var mode_temp = $("input[name=temperature]:checked").val();
           $.ajax({
           url : "countries.json",
           dataType : "json",
-          success : function(parsed_json) {
+          success : function(parsed_json1) {
             for (var i=0; i <= 242; i++) {
-           if (parsed_json[i]["name"].toLowerCase() === country) {
-                    codeCountrie= parsed_json[i]["code"]
+           if (parsed_json1[i]["name"].toLowerCase() === country) {
+                    codeCountrie= parsed_json1[i]["code"]
                 };
                 console.log(codeCountrie);
             };
@@ -39,8 +40,16 @@ var mode_temp = $("input[name=temperature]:checked").val();
               dataType : "jsonp",
               success : function(parsed_json) {
               if (parsed_json["response"]["error"]) {
+                    parse2 = parsed_json["response"]["error"]["type"];
                    alert("Sorry entered in valid state")
+                   console.log(parse2)
               } else {
+                  if (codeCountrie.length!=0 && parse2!="querynotfound") {
+                    console.log("hola que hace")
+                                    $('#search').empty()
+                  } else{
+                    console.log("esta mejor")
+                  }
               var location = parsed_json['location']['city'];
               var temp_f = parsed_json['current_observation']['temp_f'];
               var hcountrie = parsed_json["current_observation"]["display_location"]["full"];
@@ -112,6 +121,7 @@ var mode_temp = $("input[name=temperature]:checked").val();
         } else{
             alert("You must enter data to search");
         };
+
 });
     $('#reset').click(function() {
         $("#clcoment1").val("");
