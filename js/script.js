@@ -1,4 +1,15 @@
 //The funcional the page
+    function abajo() {
+    window.scrollBy(-0,50); // velocidad abajo
+    scrolldelay = setTimeout('abajo()',20); // tiempo
+    }
+    function subir() {
+    window.scrollBy(-0,-50); // velocidad subir
+    scrolldelay = setTimeout('subir()',20); // tiempo
+    }
+    function stopScroll() {
+    clearTimeout(scrolldelay);
+    }
 jQuery(document).ready(function($) {
 //The functionality of page
     $('#search').click(function() {
@@ -42,17 +53,6 @@ var mode_temp = $("input[name=temperature]:checked").val();
               var visibility = parsed_json["current_observation"]["visibility_km"];
               var humidity = parsed_json["current_observation"]["relative_humidity"];
               var wind = parsed_json["current_observation"]["wind_kph"];
-    function abajo() {
-    window.scrollBy(-0,50); // velocidad abajo
-    scrolldelay = setTimeout('abajo()',20); // tiempo
-    }
-    function subir() {
-    window.scrollBy(-0,-50); // velocidad subir
-    scrolldelay = setTimeout('subir()',20); // tiempo
-    }
-    function stopScroll() {
-    clearTimeout(scrolldelay);
-    }
                   $("#oculto").each(function() {
                     displaying = $(this).css("display");
                     if(displaying == "block") {
