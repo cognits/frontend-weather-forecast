@@ -28,7 +28,7 @@ jQuery(document).ready(function($) {
                     dataType : "jsonp",
                     success : function(parsed_json) {
                         if (parsed_json["response"]["error"]) {
-                            $(".results_modal").modal('hide');
+                            city_no_found();
                             alert("Sorry, " + parsed_json["response"]["error"]["description"])
                         } else {
                             var location = parsed_json['location']['city'];
@@ -55,3 +55,8 @@ jQuery(document).ready(function($) {
     });
 });
 
+var city_no_found = function() {
+    if ($(".no_city").length === 0) {
+        $(".modal-header").append("<h2 class='no_city'>Something is wrong...</h2>");
+    }
+};
