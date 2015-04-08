@@ -69,6 +69,22 @@ var mode_temp = $("input[name=temperature]:checked").val();
                       });
                     }
                   });
+                  $(".menu").each(function() {
+                    displaying = $(this).css("display");
+                    if(displaying == "block") {
+                      $(this).fadeOut('slow',function() {
+                       $(this).css("display","none");
+                      });
+                    } else if (displaying == "none") {
+                      $(this).fadeOut('slow',function() {
+                       $(this).css("display","inline");
+                      });
+                    } else {
+                      $(this).fadeIn('slow',function() {
+                        $(this).css("display","block");
+                      });
+                    }
+                  });
               if (mode_temp === "Fahrenheit") {
               var tempf = parsed_json["current_observation"]["temp_f"];
               var tempc = parsed_json["current_observation"]["temp_c"];
