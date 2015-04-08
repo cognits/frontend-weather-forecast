@@ -1,5 +1,4 @@
-//The efects of the page
-//End the efect slide
+//The funcional the page
     function abajo() {
     window.scrollBy(-0,50); // velocidad abajo
     scrolldelay = setTimeout('abajo()',20); // tiempo
@@ -14,19 +13,8 @@
 jQuery(document).ready(function($) {
 //The functionality of page
     $('#search').click(function() {
-var hcountrie="";
-var hcity="";
-var hstate="";
-var tempc="";
-var tempf="";
-var weather="";
-var dewpoint="";
-var icon="";
-var update="";
-var visibility="";
-var humidity="";
-var wind="";
-var codecountrie="";
+var codeCountrie="";
+var nameState="";
 var mode_temp = $("input[name=temperature]:checked").val();
         country = $("input[name=Countrie]").val();
         state = $("input[name=State]").val();
@@ -38,13 +26,33 @@ var mode_temp = $("input[name=temperature]:checked").val();
           success : function(parsed_json) {
             for (var i=0; i <= 242; i++) {
            if (parsed_json[i]["name"].toLowerCase() === country) {
-                        codecountrie= parsed_json[i]["code"]
+                    codeCountrie= parsed_json[i]["code"]
                 };
-                console.log(codecountrie);
+                console.log(codeCountrie);
             };
-            if (codecountrie.length===0) {
+            if (codeCountrie.length===0) {
                 alert("Sorry there is no record of what calls");
             } else {
+                    //the efect of slide 
+              $.ajax({
+              url : "http://api.wunderground.com/api/f7b861602853b78f/geolookup/conditions/q/"+codeCountrie+"/"+state+".json",
+              dataType : "jsonp",
+              success : function(parsed_json) {
+              if (parsed_json["response"]["error"]) {
+                   alert("Sorry entered in valid state")
+              } else {
+              var location = parsed_json['location']['city'];
+              var temp_f = parsed_json['current_observation']['temp_f'];
+              var hcountrie = parsed_json["current_observation"]["display_location"]["full"];
+              var hcity = parsed_json["current_observation"]["display_location"]["country"];
+              var hstate = parsed_json["current_observation"]["display_location"]["state_name"];
+              var weather = parsed_json["current_observation"]["weather"];
+              var dewpoint = parsed_json["current_observation"]["dewpoint_string"];
+              var icon = parsed_json["current_observation"]["icon_url"];
+              var update = parsed_json["current_observation"]["observation_time"];
+              var visibility = parsed_json["current_observation"]["visibility_km"];
+              var humidity = parsed_json["current_observation"]["relative_humidity"];
+              var wind = parsed_json["current_observation"]["wind_kph"];
                   $("#oculto").each(function() {
                     displaying = $(this).css("display");
                     if(displaying == "block") {
@@ -61,37 +69,18 @@ var mode_temp = $("input[name=temperature]:checked").val();
                       });
                     }
                   });
-                    //the efect of slide 
-              $.ajax({
-              url : "http://api.wunderground.com/api/f7b861602853b78f/geolookup/conditions/q/"+codecountrie+"/"+state+".json",
-              dataType : "jsonp",
-              success : function(parsed_json) {
-              var location = parsed_json['location']['city'];
-              var temp_f = parsed_json['current_observation']['temp_f'];
-              hcountrie = parsed_json["current_observation"]["display_location"]["full"];
-              hcity = parsed_json["current_observation"]["display_location"]["country"];
-              hstate = parsed_json["current_observation"]["display_location"]["state_name"];
-              weather = parsed_json["current_observation"]["weather"];
-              dewpoint = parsed_json["current_observation"]["dewpoint_string"];
-              icon = parsed_json["current_observation"]["icon_url"];
-              update = parsed_json["current_observation"]["observation_time"];
-              visibility = parsed_json["current_observation"]["visibility_km"];
-              humidity = parsed_json["current_observation"]["relative_humidity"];
-              wind = parsed_json["current_observation"]["wind_kph"];
-
-
               if (mode_temp === "Fahrenheit") {
-              tempf = parsed_json["current_observation"]["temp_f"];
-              tempc = parsed_json["current_observation"]["temp_c"];
+              var tempf = parsed_json["current_observation"]["temp_f"];
+              var tempc = parsed_json["current_observation"]["temp_c"];
                 $('.TempBig').append("<p class =\"tempC\">"+ tempf +" °F</p>");
                 $('.TempF').append( "<p>Celsius</p>"+"<p>"+tempc+"°C</p>");
               } else {
-              tempc = parsed_json["current_observation"]["temp_c"];
-              tempf = parsed_json["current_observation"]["temp_f"];
+              var tempc = parsed_json["current_observation"]["temp_c"];
+              var tempf = parsed_json["current_observation"]["temp_f"];
                 $('.TempBig').append("<p class =\"tempC\">"+ tempc +" °C</p>");
                 $('.TempF').append( "<p>Fahrenheit</p>"+"<p>"+tempf+"°F</p>");
               };
-              $('.TempBig').append("<p class=\"weather senst\">"+weather+"</p>"+"<p class=\"dewpoint senst\">"+dewpoint+"</p>");
+              $('.TempBig').append("<p class=\"weather senst\">"+weather+"</p>"+"<p class=\"dewpoint senst\">"+dewpoint+"</p>"+"<p class=\"senst\">Feeling Climate</p>");
               $('.icon').append("<img src= \""+ icon +"\" alt =\"Image of weather\">");
               $('.location').append("<p class =\"country\">"+ hcountrie +"</p>"+"<h1 class=\"city\">"+hcity+"</h1>"+"<h1 class=\"state\">"+hstate+"</h1>");
               $('.update').append("<p>"+update+"</p>");
@@ -99,6 +88,7 @@ var mode_temp = $("input[name=temperature]:checked").val();
               $('.relative_humidity').append("<p>"+humidity+"</p>");
               $('.wind_string').append( "<p>"+wind+"   KM/h</p>");
               }
+          }
               });
             };
           }

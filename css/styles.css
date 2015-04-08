@@ -15,7 +15,6 @@ body{
     background-size: cover;
 }
 
-
 .cognits{
     font-size: 240%;
     margin-left: 1%
@@ -24,6 +23,7 @@ body{
 .oculto{
     display: none;
 }
+
 .title1{
     font-size: 280%;
 }
@@ -97,10 +97,10 @@ body{
     margin: 1%;
     margin-bottom:2%;
 }
+
 .senst{
     font-size: 30px;
 }
-
 
 .weather{
     margin: 1%;
