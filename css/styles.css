@@ -16,12 +16,16 @@ h3 {
 
 p {
     color: black;
-    font-size: 110%;
+    font-size: 125%;
     font-family: 'Questrial', sans-serif;
 }
 
 button {
     margin-top: 3%;
+}
+
+img {
+    width: 50%;
 }
 
 .temperature {
@@ -64,4 +68,12 @@ button {
 
 .view_weather {
     margin-top: 5%;
+}
+
+.icon {
+    text-align: center;
+}
+
+.error {
+    margin-top: 10%;
 }
