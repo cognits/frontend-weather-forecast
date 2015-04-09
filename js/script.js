@@ -36,7 +36,7 @@ var mode_temp = $("input[name=temperature]:checked").val();
                 console.log(codeCountrie);
             };
             if (codeCountrie.length===0) {
-                if ($(".error").length===0){
+                if ($(".letererror").length===0){
                     $('.error').append("<p class =\"letererror\">You must enter a valid country and a state ....!</p>");
                 }
             } else{
@@ -46,7 +46,7 @@ var mode_temp = $("input[name=temperature]:checked").val();
               success : function(parsed_json) {
                     if (parsed_json["response"]["error"]) {
                         if ($(".country").length === 0) {
-                            if ($(".error").length===0){
+                            if ($(".letererror").length===0){
                                 $('.error').append("<p class =\"letererror\">Your search yielded no results try again ....</p>");
                             };
                         };
@@ -125,7 +125,7 @@ var mode_temp = $("input[name=temperature]:checked").val();
             }
           });
             } else{
-                if ($(".error").length===0){
+                if ($(".letererror").length===0){
                     $('.error').append("<p class =\"letererror\">You must enter a valid country and a state ....!!</p>");
                 };
             };
