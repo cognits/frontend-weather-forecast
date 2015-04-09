@@ -32,17 +32,17 @@ jQuery(document).ready(function($) {
                             var location = parsed_json['location']['city'];
                             var weather = parsed_json["current_observation"]["weather"];
                             var weather_icon = parsed_json["current_observation"]["icon_url"];
+                            var wind = parsed_json["current_observation"]["wind_string"];
 
                             /*Type of temperature*/
                             if (temp_type === "Fahrenheit") {
                                 var temp_f = parsed_json['current_observation']['temp_f'];
-                                valid_search_fahr(weather_icon, temp_f, weather);
+                                valid_search_fahr(weather_icon, temp_f, weather, wind, location);
                             } else {
                                 var temp_c = parsed_json['current_observation']['temp_c'];
-                                alert("Current temperature in" + location + "is" + temp_c + ". " + weather);
+                                valid_search_celcius(weather_icon, temp_c, weather, wind, location);
                             };
                         };
-                        console.log(parsed_json)
                     }
                     });
                         };
@@ -54,15 +54,12 @@ jQuery(document).ready(function($) {
     });
 });
 
-
-
 var sad_face = "<img src='images/sad.png' alt='sad face'>";
 var error_no_city = "<p class='info error'>Sorry, we have no information of this city.</p>";
 var some_wrong = "<h2 class='title_search'>Something is wrong...</h2>";
 var no_filled = "<h2 class='title_search'>Please fill out all fields.</h2>";
 var country_no = "<p class='error'>I don't know this country, but you can search again.</p>";
 var weather_title = "<h2 class='title_search'>Weather forecast</h2>";
-
 
 var city_no_found = function() {
     if ($(".title_search").length === 0) {
@@ -109,20 +106,41 @@ var no_country = function() {
     };
 };
 
-var valid_search_fahr = function(icon, temperature, weather) {
+var valid_search_fahr = function(icon, temperature, weather, wind, city) {
     if ($(".title_search").length === 0) {
-        $(".modal-header").append(weather_title);
+        $(".modal-header").append("<h2 class='title_search'>Weather forecast : "+ city +".</h2>");
         $(".icon").append("<img src='" + icon + "' alt='icon description'>");
         $(".description").append("<p class='error'> <b>Current temperature : </b>" + temperature + "°F.</p>");
         $(".description").append("<p class='error'> <b>Weather : </b>" + weather + ".</p>");
+        $(".description").append("<p class='error'> <b>Wind conditions : </b>" + wind + ".</p>");
     } else {
         $('.title_search').remove();
         $("img").remove();
         $(".error").remove();
-        $(".modal-header").append(weather_title);
+        $(".modal-header").append("<h2 class='title_search'>Weather forecast : "+ city +".</h2>");
         $(".icon").append("<img src='" + icon + "' alt='icon description'>");
         $(".description").append("<p class='error'> <b>Current temperature : </b>" + temperature + "°F.</p>");
         $(".description").append("<p class='error'> <b>Weather : </b>" + weather + ".</p>");
+        $(".description").append("<p class='error'> <b>Wind conditions : </b>" + wind + ".</p>");
+    };
+};
+
+var valid_search_celcius = function(icon, temperature, weather, wind, city) {
+    if ($(".title_search").length === 0) {
+        $(".modal-header").append("<h2 class='title_search'>Weather forecast : "+ city +".</h2>");
+        $(".icon").append("<img src='" + icon + "' alt='icon description'>");
+        $(".description").append("<p class='error'> <b>Current temperature : </b>" + temperature + "°C.</p>");
+        $(".description").append("<p class='error'> <b>Weather : </b>" + weather + ".</p>");
+        $(".description").append("<p class='error'> <b>Wind conditions : </b>" + wind + ".</p>");
+    } else {
+        $('.title_search').remove();
+        $("img").remove();
+        $(".error").remove();
+        $(".modal-header").append("<h2 class='title_search'>Weather forecast : "+ city +".</h2>");
+        $(".icon").append("<img src='" + icon + "' alt='icon description'>");
+        $(".description").append("<p class='error'> <b>Current temperature : </b>" + temperature + "°F.</p>");
+        $(".description").append("<p class='error'> <b>Weather : </b>" + weather + ".</p>");
+        $(".description").append("<p class='error'> <b>Wind conditions : </b>" + wind + ".</p>");
     };
 };
 
