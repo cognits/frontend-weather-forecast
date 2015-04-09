@@ -1,15 +1,20 @@
 // Javascript Code.
+
+/*Titles of modals*/
 var no_filled = "<h2 class='title_search'>Please fill out all fields.</h2>";
 var some_wrong = "<h2 class='title_search'>Something is wrong...</h2>";
 var weather_title = "<h2 class='title_search'>Weather forecast</h2>";
 
+/*Error information.*/
 var country_no = "<p class='info'>I don't know this country, but you can search again.</p>";
 var error_no_city = "<p class='info'>Sorry, we have no information of this city.</p>";
 var search_something = "<p class='info'>What do you want to search?</p>";
 
+/*Images for description.*/
 var fail_country = "<img src='images/failsearch.png' alt='not found'>";
 var sad_face = "<img src='images/sad.png' alt='sad face'>";
 
+/*Measurement scale.*/
 var scale_farhen = "°F. ";
 var scale_celcius = "°C. ";
 
@@ -68,7 +73,7 @@ jQuery(document).ready(function($) {
     });
 });
 
-
+/*This function adds the items to the modal whenever an error occurs.*/
 var for_errors = function(title, image, description) {
     if ($(".title_search").length === 0) {
         $(".modal-header").append(title);
@@ -84,6 +89,7 @@ var for_errors = function(title, image, description) {
     };
 };
 
+/*This function adds the items to the modal ever happens successful search.*/
 var valid_search = function(icon, temperature, type_scale, weather, wind, city) {
     if ($(".title_search").length === 0) {
         $(".modal-header").append("<h2 class='title_search'>Weather forecast : "+ city +".</h2>");
