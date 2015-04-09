@@ -1,43 +1,94 @@
-<!--
-Usa este archivo para tu proyecto. No olvides hacer
-la estructura correta y guardar TODO tu CSS en el archivo styles.css
- -->
 <!DOCTYPE html>
 <!-- saved from url=(0039)http://getbootstrap.com/examples/blog/# -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="http://getbootstrap.com/favicon.ico">
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="images/weather.ico">
 
-    <title>Cognits Blog</title>
+        <title>Cognits Weather</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
+        <!-- Bootstrap core CSS -->
+        <link href="css/libs/bootstrap.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="css/styles.css" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <link href="css/styles.css" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Questrial|Righteous' rel='stylesheet'>
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+    </head>
+
+    <body>
+        <div class="container-fluid contenedor">
+            <header>
+                <div class="center_column up">
+                    <h1>COGNITS WEATHER</h1>
+                    <p class="white_text">Type a country and a state (or province) to know the climate of the region.</p>
+                </div>
+            </header>
+
+            <div class="center_column container_forms">
+                <h3>Type a Country</h3>
+                <form name="country_form">
+                    <input type="text" name="country" id="country" value="" onfocus="javascript:this.value=''" />
+                </form>
+
+                <h3>Type a State</h3>
+                <form name="state_form">
+                    <input type="text" name="province" value="" onfocus="javascript:this.value=''" />
+                </form>
 
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+                <h3 class="temperature">Temperature</h3>
 
-</head>
+                <div class="check_containter">
+                    <form name="measurement_system">
+                        <input type="radio" name="temperature" value="Celsius" class="celsius" checked /> Celsius
+                        <input type="radio" name="temperature" value="Fahrenheit" class="fahrenheit" /> Fahrenheit
+                    </form>
+                </div>
+                <button type="button" class="btn btn-success view_weather" data-toggle="modal" data-target=".results_modal">VIEW WEATHER FORECAST</button>
+            </div> <!--End of .container_forms-->
 
-  <body>
+            <div class="modal fade results_modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            
+                        </div>
 
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-6 icon"></div>
+                                <div class="col-md-6 description"></div>
+                            </div>
+                        </div>
 
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="js/script.js"></script>
-    <script src="js/bootstrap.js"></script>
+        </div> <!--End of .contenedor-->
 
-  </body>
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="js/libs/jquery-2.1.1.js"></script>
+        <script src="js/script.js"></script>
+        <script src="js/libs/bootstrap.js"></script>
+
+    </body>
 </html>
