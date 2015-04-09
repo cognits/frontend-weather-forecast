@@ -20,6 +20,7 @@ var mode_temp = $("input[name=temperature]:checked").val();
         country = $("input[name=Countrie]").val();
         state = $("input[name=State]").val();
         country = country.toLowerCase();
+        state=state.toLowerCase();
         if (country.length !=0 && state.length !=0){
           $.ajax({
           url : "countries.json",
@@ -31,25 +32,32 @@ var mode_temp = $("input[name=temperature]:checked").val();
                 };
                 console.log(codeCountrie);
             };
+            for (var s=0; s <= 242; s++) {
+           if (parsed_json1[s]["name"].toLowerCase() === state) {
+                    parse2=parsed_json1[s]["name"]
+                };
+                console.log(parse2);
+              };
             if (codeCountrie.length===0) {
                 alert("Sorry there is no record of what calls");
-            } else {
-                    //the efect of slide 
+            } else if (parse2.length===0){
+                alert("hola que hace");
+            }else{
+              $('#search').empty()
+                  //the efect of slide 
               $.ajax({
               url : "http://api.wunderground.com/api/f7b861602853b78f/geolookup/conditions/q/"+codeCountrie+"/"+state+".json",
               dataType : "jsonp",
               success : function(parsed_json) {
-              if (parsed_json["response"]["error"]) {
-                    parse2 = parsed_json["response"]["error"]["type"];
-                   alert("Sorry entered in valid state")
-                   console.log(parse2)
-              } else {
-                  if (codeCountrie.length!=0 && parse2!="querynotfound") {
-                    console.log("hola que hace")
-                                    $('#search').empty()
-                  } else{
-                    console.log("esta mejor")
-                  }
+
+
+
+
+
+
+
+
+
               var location = parsed_json['location']['city'];
               var temp_f = parsed_json['current_observation']['temp_f'];
               var hcountrie = parsed_json["current_observation"]["display_location"]["full"];
@@ -112,7 +120,7 @@ var mode_temp = $("input[name=temperature]:checked").val();
               $('.visibility_km').append("<p>"+visibility+"    Km</p>");
               $('.relative_humidity').append("<p>"+humidity+"</p>");
               $('.wind_string').append( "<p>"+wind+"   KM/h</p>");
-              }
+
           }
               });
             };
@@ -129,3 +137,9 @@ var mode_temp = $("input[name=temperature]:checked").val();
         location.reload();
     });
 });
+ //                 if (codeCountrie.length!=0 && parse2!="querynotfound") {
+       //             console.log("hola que hace")
+         //           $('#search').empty()
+         //         } else{
+          //          console.log("esta mejor")
+           //       }
