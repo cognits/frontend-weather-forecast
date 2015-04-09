@@ -131,8 +131,10 @@ var mode_temp = $("input[name=temperature]:checked").val();
             };
     });
 });
+
 $('#reset').click(function() {
     $("#clcoment1").val("");
     $("#clcoment2").val("");
     location.reload();
 });
+//  the java of page!!

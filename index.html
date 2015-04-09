@@ -8,9 +8,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="">
-        <link rel="icon" href="http://getbootstrap.com/favicon.ico">
+        <link rel="icon" href="images/Lightning.png">
 
-        <title>Cognits Blog</title>
+        <title>Weather Forecast</title>
 
         <!-- Bootstrap core CSS -->
         <link href="css/ibs/bootstrap.css" rel="stylesheet">
@@ -31,17 +31,17 @@
     <div class="container-fluid">
         <div class="col-md-12 menu">
             <div class="row">
-            <div class="center_column up">
+            <div class="center_column up" onmouseover="stopScroll()">
                 <div class="cognits" >Cognits </div>
-                <div class="title" style="background-color: rgba(0, 0, 0, 0.8)">
+                <div class="title" style="background-color: rgba(0, 0, 0, 0.8)" onmouseover="stopScroll()">
                     <p class="title1">Weather forecast</p>
                     <p class="cognits">An easy way to know the weather conditions anywhere.</p>
                 </div>
             </div><!--End centercolumd-->
             </div><!--End row-->
-            <div class="center_column up">
-            <div class="entering col-md-12" style="background-color: rgba(0, 0, 0, 0.8)">
-                    <p class="pnew">Enter country</p>
+            <div class="center_column up" onmouseover="stopScroll()">
+            <div class="entering col-md-12" style="background-color: rgba(0, 0, 0, 0.8)" onmouseover="stopScroll()">
+                    <p class="pnew" >Enter country</p>
                     <input type="text" name="Countrie" maxlength="140" id="clcoment1" class="sizein" onfocus="javascript:this.value=''" title="Enter countrie" />
                     <p class="pnew">Enter state</p>
                     <input type="text" name="State" maxlength="140" id="clcoment2" onfocus="javascript:this.value=''" title="Enter state"  class="sizein" />
@@ -49,7 +49,7 @@
                     <input type="radio" name="temperature" value="Celsius" title="Temperature Celsius" class="celsius" checked /><p class="type_tem"> °C </p>
                     <input type="radio" name="temperature" value="Fahrenheit" title="Temperature fahrenheit" class="fahrenheit" /><p class="type_tem"> °F </p>
                     <br/>
-                    <div id="search" class="pnew cusors" style="display:scroll;bottom:10px;right:10px;" onclick ="abajo()" onclick="stopScroll()" title="Search">Search</div>
+                    <div id="search" class="pnew cusors" style="display:scroll;bottom:10px;right:10px;" onclick ="abajo()" onmouseover="stopScroll()" title="Search">Search</div>
                 <br/>
                 <br/>
                 <div class="error"></div>
