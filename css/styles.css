@@ -54,6 +54,11 @@ body{
     color: black;
 }
 
+.letererror{
+    display: inline-block;
+    margin: 1%;
+    font-size: 250%;
+}
 .type_tem{
     display: inline-block;
     margin: 1%;
