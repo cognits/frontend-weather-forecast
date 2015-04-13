@@ -1,8 +1,10 @@
+<!DOCTYPE html>
 <!--
 Usa este archivo para tu proyecto. No olvides hacer
 la estructura correta y guardar TODO tu CSS en el archivo styles.css
  -->
-<!DOCTYPE html>
+
+
 <!-- saved from url=(0039)http://getbootstrap.com/examples/blog/# -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
@@ -10,15 +12,11 @@ la estructura correta y guardar TODO tu CSS en el archivo styles.css
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="http://getbootstrap.com/favicon.ico">
+    <link rel="icon" href="images/kar.ico">
 
-    <title>Cognits Blog</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-
+    <title>Weather Forecast *** KAR</title>
     <!-- Custom styles for this template -->
-    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet"/>
 
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -30,14 +28,41 @@ la estructura correta y guardar TODO tu CSS en el archivo styles.css
 </head>
 
   <body>
+    <!-- All Banner -->
+    <div class = "banner">
+        <div class= "logo">
+            <!-- Logo Cognits -->
+            <img src="images/cognits-logo.png" alt="Cognits Logo"/>            
+        </div>
+        <p class="title"> Weather - Forecast </p>
+    </div>
+    <hr class="separators">
+    <!--Search -->
+    <p class="search"> »»» Press to Search »»» </p>
+    <div class= "insert"> 
 
+        <!-- Textbox of Dates -->
+        <p class="searching">Insert Country » <input name="pais" class="country" type="text" placeholder="Country"/></p>
+        <p class="searching">Insert City » <input name="ciudad" class="city" type="text" placeholder="City"/></p>
+        <!-- RadioButtons  °C/°F-->
+        <p class = "rc"><input class= "r1" type="Radio" name="celsius" value=""> °C </p>
+        <p class = "rf"> <input class= "r2" type="Radio" name="fahrenheit" value=" "> °F </p>
+        <!-- Buttons -->
+        <button class ="button" id ="dell">Reset Here!!</button>
+        <button class ="button" id="start">Start Here!</button>
+    </div>
+    
+    
+    <!-- Div of the Country and Code -->
+    <div class="screen1"> </div>
+    <!-- Div of the Screen -->
+    <div class="screen2"> </div>
 
+    <!-- JQuery -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/script.js"></script>
-    <script src="js/bootstrap.js"></script>
 
   </body>
 </html>

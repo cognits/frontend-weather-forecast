@@ -1,0 +1,150 @@
+/* All Banner */
+.banner{
+	/*background-color: #58FAF4;*/
+	width: 1285px;
+	height: 110px;
+}
+/*Title of the Weather*/
+.title{
+	color: white;
+	font-size: 40px;
+	font-family: Verdana;
+	margin-top: -70px;
+	margin-left: 700px;
+}
+/*Cognits Logo*/
+.logo{
+	margin-left: 30px;
+	margin-top: 20px;
+}
+
+/* Div of Search Country */
+.insert{
+	margin-top: 50px;
+	margin-left: 340px;
+	width: 550px;
+	height: 180px;
+	border: 2px solid gray;
+	border-radius: 7px;
+}
+/*Text of Search */
+.search{
+	margin-left: 490px;
+	font-size: 20px;
+}
+
+/*TextBox: Country and City */
+.country{
+	margin-left: 20px;
+}
+.city{
+	margin-left: 50px;
+}
+
+/*Buttons of the Search and Dell*/
+.button{
+	margin-left: 110px;
+}
+/*Parraphs of the Country and City*/
+.searching{
+	margin-left: 85px;
+}
+
+/*RadioButton: °C/°F*/
+.rc{
+	margin-left: 100px;
+}
+.rf{
+	margin-top: -35px;
+	margin-left: 300px;
+}
+
+
+/* Div of Country and Code */
+.screen1{
+	margin-left: 550px;
+	font-size: 20px;
+	display: inline-block;
+}
+
+/* Body */
+body{
+	background-image: url('http://img.fondosypantallas.com/wp-content/uploads/2008/12/ph-10165.jpg');
+	cursor: url("http://u.jimdo.com/www21/o/s4e9df44a0ad8ccd8/img/i0ebb25453c3942ad/1391502327/thumb/image.png"),default; 
+}
+
+/* Botones */
+.buton{
+	display: inline-block; 
+}
+
+/****** All Div of the Weather ******/
+.screen2{
+	margin-left: 150px;
+	width: 950px;
+	height: 540px;
+	border: 2px solid gray;
+	border-radius: 7px;
+	font-size: 20px;
+}
+
+/* Last Up Date */
+.display{
+	margin-left: 30px;
+	font-size: 30px;
+}
+
+/*Image of Cloud and Text*/
+.cloud{
+	margin-left: 50px;
+	width: 120px;
+	height: 100px;
+}
+.icon{
+	margin-left: 30px;
+}
+
+/* Temp - °C  / °F */
+.temp_c_f{
+	margin-top: -180px;
+	margin-left: 250px;
+	font-size: 20px;
+}
+.t_c_f{
+	margin-left: 300px;
+	font-size: 30px;
+}
+
+
+/* Up_date */
+.up_date{
+	margin-top: 100px;
+	margin-left: 20px;
+}
+
+/* wheather */
+.weather{
+	margin-left: 20px;
+}
+
+/*Wind*/
+.wind{
+	margin-left: 20px;
+}
+
+.humidity{
+	margin-left: 20px;
+}
+
+/*preasure*/
+.pressure{
+	margin-top: -132px;
+	margin-left: 650px;
+}
+
+/*Visibility*/
+.visibility{
+
+	margin-left: 650px;
+
+}
