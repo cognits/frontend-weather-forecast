@@ -1,15 +1,5 @@
 //The funcional the page
-    function abajo() {
-    window.scrollBy(-0,50); // velocidad abajo
-    scrolldelay = setTimeout('abajo()',20); // tiempo
-    }
-    function subir() {
-    window.scrollBy(-0,-50); // velocidad subir
-    scrolldelay = setTimeout('subir()',20); // tiempo
-    }
-    function stopScroll() {
-    clearTimeout(scrolldelay);
-    }
+
 var parse2="";
 jQuery(document).ready(function($) {
 $('.fahrenheit').click(function() {

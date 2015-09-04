@@ -16,7 +16,7 @@ body{
 }
 
 .cognits{
-    font-size: 240%;
+    font-size: 30px;
     margin-left: 1%;
 }
 
@@ -25,29 +25,30 @@ body{
 }
 
 .title1{
-    font-size: 280%;
+    font-size: 35px;
 }
 
 .title{
     text-align: center;
     border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .pnew{
-    font-size: 150%;
+    font-size: 20px;
     margin: 1%;
 }
 
 .entering{
     text-align: center;
     border-radius: 5px;
-    margin-top: 3%;
-    margin-bottom: 5%;
+    margin-top: 7%;
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .sizein{
-    height: 25px;
-    width: 15%;
+    height: 30px;
+    width: 60px
     -webkit-box-shadow: 0 0 3px #a7a7a7;
     -moz-box-shadow: 0 0 3px #a7a7a7;
     box-shadow: 0 0 3px #a7a7a7;
@@ -57,7 +58,7 @@ body{
 .letererror{
     display: inline-block;
     margin: 1%;
-    font-size: 250%;
+    font-size: 35px;
 }
 .type_tem{
     display: inline-block;
@@ -84,10 +85,11 @@ body{
 
 .fontsizesq{
     font-size: 2.5rem;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .country{
-    font-size: 500%;
+    font-size: 50px;
     margin-bottom: 3%;
     margin-top: 0.1%;
 }
@@ -100,7 +102,7 @@ body{
 }
 
 .tempC{
-    font-size: 600%;
+    font-size: 40px;
     margin: 1%;
     margin-bottom:2%;
 }
@@ -118,7 +120,7 @@ body{
 }
 
 .frames{
-    margin-top: 5%;
+    margin:0px auto;
 }
 
 .TempF{
@@ -159,14 +161,41 @@ body{
 }
 
 .down{
-    font-size: 150%;
+    font-size: 20px;
 }
 .update{
     margin-right: 5px;
     display: inline-block;
 }
 
+.margin_top{
+    margin-top: 5%;
+}
 .newSearch{
-    margin-left: 5%;
+    margin-right: 3%;
     float: right;
+}
+
+@media screen and (max-width: 759px) {
+    .letererror{
+        display: inline-block;
+        margin: 1%;
+        font-size: 20px;
+    }
+    .cognits{
+        font-size: 20px;
+        margin-left: 1%;
+    }
+    .title1{
+        font-size: 20px;
+    }
+}
+@media screen and (min-width: 759px) {
+    .frames{
+        margin: 6%;
+    }
+    .down{
+        position: fixed;
+        bottom: 0;
+    }
 }
