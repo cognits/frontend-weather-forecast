@@ -1,0 +1,201 @@
+body{
+    margin: 0.5%
+}
+
+.menu{
+    font-family:'Source Sans Pro', sans-serif;
+    color: white;
+}
+
+.first{
+    background: url(../images/fondoprincipal.gif) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.cognits{
+    font-size: 30px;
+    margin-left: 1%;
+}
+
+.oculto{
+    display: none;
+}
+
+.title1{
+    font-size: 35px;
+}
+
+.title{
+    text-align: center;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.pnew{
+    font-size: 20px;
+    margin: 1%;
+}
+
+.entering{
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 7%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.sizein{
+    height: 30px;
+    width: 60px
+    -webkit-box-shadow: 0 0 3px #a7a7a7;
+    -moz-box-shadow: 0 0 3px #a7a7a7;
+    box-shadow: 0 0 3px #a7a7a7;
+    color: black;
+}
+
+.letererror{
+    display: inline-block;
+    margin: 1%;
+    font-size: 35px;
+}
+.type_tem{
+    display: inline-block;
+    margin: 1%;
+    font-size: 250%;
+}
+.cusors{
+    cursor: pointer;
+}
+.cursor{
+    cursor:pointer;
+}
+
+.clima{
+    font-family:'Source Sans Pro', sans-serif;
+    color: white;
+    display:none;
+}
+
+.location{
+    margin-bottom: 5%;
+    margin-left: 5%;
+}
+
+.fontsizesq{
+    font-size: 2.5rem;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.country{
+    font-size: 50px;
+    margin-bottom: 3%;
+    margin-top: 0.1%;
+}
+
+.TempBig{
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 5%;
+    margin-left: 10%;
+}
+
+.tempC{
+    font-size: 40px;
+    margin: 1%;
+    margin-bottom:2%;
+}
+
+.senst{
+    font-size: 30px;
+}
+
+.weather{
+    margin: 1%;
+}
+
+.dewpoint{
+    margin: 1%;
+}
+
+.frames{
+    margin:0px auto;
+}
+
+.TempF{
+    margin-top: 5%;
+    margin: 2%;
+    height: 180px;
+    width: 150px;
+    text-align: center;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.visibility_km{
+    margin: 2%;
+    height: 180px;
+    width: 150px;
+    text-align: center;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.relative_humidity{
+    margin: 2%;
+    height: 180px;
+    width: 150px;
+    text-align: center;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.wind_string{
+    margin: 2%;
+    height: 180px;
+    width: 150px;
+    text-align: center;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.down{
+    font-size: 20px;
+}
+.update{
+    margin-right: 5px;
+    display: inline-block;
+}
+
+.margin_top{
+    margin-top: 5%;
+}
+.newSearch{
+    margin-right: 3%;
+    float: right;
+}
+
+@media screen and (max-width: 759px) {
+    .letererror{
+        display: inline-block;
+        margin: 1%;
+        font-size: 20px;
+    }
+    .cognits{
+        font-size: 20px;
+        margin-left: 1%;
+    }
+    .title1{
+        font-size: 20px;
+    }
+}
+@media screen and (min-width: 759px) {
+    .frames{
+        margin: 6%;
+    }
+    .down{
+        position: fixed;
+        bottom: 0;
+    }
+}
